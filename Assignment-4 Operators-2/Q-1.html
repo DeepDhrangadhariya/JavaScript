@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+
+    <style type="text/css">
+
+        legend{
+
+            text-align: center;
+            margin-left: 0%;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+    
+    <center>
+
+        <fieldset>
+            <legend >Enter Values</legend>
+
+            <br>
+
+            <label>First Value</label>
+            <br>
+            <input type="text" placeholder="Enter First Value" id="first">
+            <br><br>
+
+            <label>Second Value</label>
+            <br>
+            <input type="text" placeholder="Enter Second Value" id="second">
+            <br><br>
+
+            <label>Third Value</label>
+            <br>
+            <input type="text" placeholder="Enter Third Value" id="third">
+            <br><br>
+
+            <label>Forth Value</label>
+            <br>
+            <input type="text" placeholder="Enter Forth Value" id="forth">
+            <br><br>
+
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend >Before</legend>
+
+            <br>
+
+            <h2 id="b1"></h2>
+            <h2 id="b2"></h2>
+            <h2 id="b3"></h2>
+            <h2 id="b4"></h2>
+            
+
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend >After</legend>
+
+            <br>
+
+            <h2 id="a1"></h2>
+            <h2 id="a2"></h2>
+            <h2 id="a3"></h2>
+            <h2 id="a4"></h2>
+
+
+        </fieldset>
+
+    </center>
+
+</body>
+</html>
+
+<script>
+
+    let one = document.getElementById("first").value
+    let two = document.getElementById("second").value
+    let three = document.getElementById("third").value
+    let four = document.getElementById("forth").value
+
+    document.getElementById("b1").innerText = 'First Value : ' + one
+    document.getElementById("b2").innerText = 'Second Value : ' + two
+    document.getElementById("b3").innerText = 'Third Value : ' + three
+    document.getElementById("b4").innerText = 'Forth Value : ' + four
+
+    document.getElementById("a1").innerText = 'First Value : ' + two
+    document.getElementById("a2").innerText = 'Second Value : ' + three
+    document.getElementById("a3").innerText = 'Third Value : ' + four
+    document.getElementById("a4").innerText = 'Forth Value : ' + one
+    
+
+</script>

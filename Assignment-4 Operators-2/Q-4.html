@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-4</title>
+
+    <style type="text/css">
+
+        legend{
+
+            text-align: center;
+            margin-left: 0%;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        #nsf{
+
+            font-weight: bold;
+
+        }
+
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+    
+    <center>
+
+        <fieldset>
+            <legend >Employee Salary Calculation</legend>
+
+            <br>
+
+            <label>Basic Salary</label><br>
+            <input type="text" placeholder="Enter Basic Salary" id="i1">
+
+            <br><br>
+
+            <label>Bonus Amount</label><br>
+            <input type="text" placeholder="Enter Bonus Amount" id="i2">
+
+            <br><br>
+
+            <label>Housing Allowance</label><br>
+            <input type="text" placeholder="Enter Housing Allowance" id="i3">
+
+            <br><br>
+
+            <label>Paid Leave Days</label><br>
+            <input type="text" placeholder="Enter Paid Leave Days" id="i4">
+
+            <br><br>
+
+            <label>Income Tax</label><br>
+            <input type="text" placeholder="Enter Income Tax" id="i5">
+
+            <br><br>
+
+            <label>Medical Insurance</label><br>
+            <input type="text" placeholder="Enter Medical Insurance" id="i6">
+
+            <br><br>
+
+            <label>Provident Fund (PF)</label><br>
+            <input type="text" placeholder="Enter Provident Fund (PF)" id="i7">
+
+            <br><br><br><hr>
+
+            <h1>Net Salary: </h1>
+            <p id="bs"></p>
+            <p id="b"></p>
+            <p id="ha"></p>
+            <p id="pld"></p>
+            <p id="it"></p>
+            <p id="mi"></p>
+            <p id="pf"></p>
+            <h2 id="nsf"></h2>
+
+
+        </fieldset>
+
+
+    </center>
+
+</body>
+</html>
+
+<script>
+
+    let a1 = document.getElementById("i1").value
+    let a2 = document.getElementById("i2").value
+    let a3 = document.getElementById("i3").value
+    let a4 = document.getElementById("i4").value
+    let a5 = document.getElementById("i5").value
+    let a6 = document.getElementById("i6").value
+    let a7 = document.getElementById("i7").value
+
+    let ns1 = a1
+    let ns2 = a2
+    let ns3 = a3
+
+    let ans = +a1 + +a2 + +a3
+
+    let ns4 = a4
+    let ans4 = ans - (a4)*(a1/30)
+    let ans41 = a1 - ans4
+    
+    let ns5 = a5
+    let ans5 = +ans4 - +ns5
+
+    let ns6 = a6
+    let ans6 = +ans5 - +ns6
+
+    let ns7 = a7
+    let ans7 = +ans6 - +ns7
+
+    document.getElementById("bs").innerText = "Basic Salary : " + a1
+    document.getElementById("b").innerText = "Bonus Amount : " + a2
+    document.getElementById("ha").innerText = "Housing Allowance : " + a3
+    document.getElementById("pld").innerText = "Paid Leave Cut : " + ans41
+    document.getElementById("it").innerText = "Income Tax : " + a5
+    document.getElementById("mi").innerText = "Medical Insurance : " + a6
+    document.getElementById("pf").innerText = "Provident Fund (PF) : " + a7
+    document.getElementById("nsf").innerText = "Final Net Salary : " + ans7
+    
+
+</script>

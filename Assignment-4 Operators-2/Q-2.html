@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+
+    <style type="text/css">
+
+        legend{
+
+            text-align: center;
+            margin-left: 0%;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend >Restaurant Bill</legend>
+
+        <br>
+
+        <label>Product 1 Cost:</label>
+        <br>
+        <input type="text" placeholder="Enter cost of Product 1" id="p1">
+        <br><br>
+
+        <label>Product 2 Cost:</label>
+        <br>
+        <input type="text" placeholder="Enter cost of Product 2" id="p2">
+        <br><br>
+
+        <label>Product 3 Cost:</label>
+        <br>
+        <input type="text" placeholder="Enter cost of Product 3" id="p3">
+        <br><br>
+
+        <label>Product 4 Cost:</label>
+        <br>
+        <input type="text" placeholder="Enter cost of Product 4" id="p4">
+        <br><br>
+
+        <label>Product 5 Cost:</label>
+        <br>
+        <input type="text" placeholder="Enter cost of Product 5" id="p5">
+        <br><br>
+
+        <h1>Total Bill: </h1>
+        <p id="total"></p>
+        <p id="g"></p>
+        <p id="s"></p>
+        <p id="f"></p>
+
+
+    </fieldset>
+
+
+    <script>
+
+        let a1 = document.getElementById("p1").value
+        let a2 = document.getElementById("p2").value
+        let a3 = document.getElementById("p3").value
+        let a4 = document.getElementById("p4").value
+        let a5 = document.getElementById("p5").value
+
+        let t1 = +a1 + +a2 + +a3 + +a4 + +a5
+
+        let t2 = 0.12 * t1
+        let t3 = 0.1 * t1
+
+        let t4 = t1 - t2 - t3
+
+        document.getElementById("total").innerText = 'Product Total Is : ' + t1
+        document.getElementById("g").innerText = 'GST 12% : -' + t2
+        document.getElementById("s").innerText = 'Service Tax 10% : -' + t3
+        document.getElementById("f").innerText = 'Grand Total : ' + t4
+
+    </script>
+
+</body>
+</html>
