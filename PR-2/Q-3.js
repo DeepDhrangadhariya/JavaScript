@@ -2,7 +2,7 @@ let a = document.getElementById("i1").value
 let b = document.getElementById("i2").value
 
 
-if (num === "") {
+if (a === "") {
     document.getElementById("ans").innerText = "";
   } else {
 
