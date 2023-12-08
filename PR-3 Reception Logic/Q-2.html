@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+</head>
+<body>
+    
+    <center>
+        <h1>Reception Logic</h1><br><br><br>
+        <h1>Enter Number Of Guests</h1><br>
+        <input type="text" id="n1" placeholder="Guests"><br><br><br>
+
+        <h1 id="ans"></h1><br><br>
+        <!-- <h1 id="result"></h1> -->
+        
+
+    </center>
+
+</body>
+</html>
+
+<script>
+
+    let g = parseInt(document.getElementById("n1").value)
+
+    if (g < 0) {
+    console.log("Invalid input. Please enter a valid positive integer.");
+} else {
+
+    let firstNumber = 0, secondNumber = 1;
+
+
+    console.log("Fibonacci sequence up to " + g + ": " + firstNumber + ", " + secondNumber);
+
+
+    while (firstNumber + secondNumber <= g) {
+        let nextNumber = firstNumber + secondNumber;
+        console.log(nextNumber);
+        firstNumber = secondNumber;
+        secondNumber = nextNumber;
+    }
+}
+
+</script>

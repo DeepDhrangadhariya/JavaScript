@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    
+    <center>
+        <h1>Reception Logic</h1><br><br><br>
+        <h1>Enter Number Of Guests</h1><br>
+        <input type="text" id="n1" placeholder="Guests"><br><br><br>
+
+        <h1 id="ans"></h1><br><br>
+        <h1 id="result"></h1>
+        
+
+    </center>
+
+</body>
+</html>
+
+<script>
+
+    let g = document.getElementById("n1").value
+
+    if(g == ""){
+
+        document.getElementById("ans").innerText = ""
+
+    }
+    else{
+
+        if(g < 0){
+
+            document.getElementById("ans").innerHTML = "Invalid input. Please enter a valid number of guests."
+
+        }
+        else{
+
+            if(g == 0){
+
+                document.getElementById("ans").innerText = "It seems like no one is attending the reception. Are you sure?"
+
+            }
+            else if(g == 1){
+
+                document.getElementById("ans").innerText = "Great! There is one guest attending the reception."
+
+            }
+            else if(g == 2){
+
+                document.getElementById("ans").innerText = "Perfect! You and one other person will be attending the reception."
+
+            }
+            else if(g > 2){
+
+                document.getElementById("ans").innerText = g + " guests will be attending the reception."
+
+            }
+            else{
+
+                document.getElementById("ans").innerHTML = "Invalid input. Please enter a valid number of guests."
+
+            }
+
+            if(g < 0 || g == 0){
+
+                document.getElementById("Result").innerHTML = "Invalid input. Please enter a valid number of guests."
+
+            }
+            else{
+
+                if(g == 3){
+
+                    document.getElementById("result").innerText = ""
+
+                }
+                else{
+
+                    for(let i = 1 ; i <= g ; i++){
+
+                    let a = ""
+
+                    a+= i
+
+                    // document.getElementById("result").innerText = "Thank you, guest " + a + ", for attending the reception!"
+                    console.log("Thank you, guest " + a + ", for attending the reception!")
+
+                    }
+
+
+                }
+
+                
+            }
+
+        }
+
+    }
+
+</script>

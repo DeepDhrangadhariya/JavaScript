@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+
+// Function to print the spiral matrix
+function printSpiralMatrix(rows, cols) {
+    const matrix = Array.from({ length: rows }, () => Array(cols).fill(0));
+
+    let top = 0, bottom = rows - 1, left = 0, right = cols - 1;
+    let value = 1;
+
+    while (top <= bottom && left <= right) {
+        // Print top row
+        for (let i = left; i <= right; i++) {
+            matrix[top][i] = value++;
+        }
+        top++;
+
+        // Print right column
+        for (let i = top; i <= bottom; i++) {
+            matrix[i][right] = value++;
+        }
+        right--;
+
+        // Print bottom row
+        for (let i = right; i >= left; i--) {
+            matrix[bottom][i] = value++;
+        }
+        bottom--;
+
+        // Print left column
+        for (let i = bottom; i >= top; i--) {
+            matrix[i][left] = value++;
+        }
+        left++;
+    }
+
+    // Print the spiral matrix using console.log
+    for (let i = 0; i < rows; i++) {
+        console.log(matrix[i].join(' '));
+    }
+}
+
+// Function call to print the spiral matrix for a 4x4 matrix
+printSpiralMatrix(4, 4);
+
+
+</script>
