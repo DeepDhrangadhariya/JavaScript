@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q-5</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+
+  let product = 1;
+  let num = 555;
+
+  function sumOfDigits() {
+    while (num > 0) {
+      product *= num % 10;
+      num = parseInt(num / 10)
+    }
+
+    console.log(parseInt(product));
+  }
+
+  sumOfDigits();
+
+</script>
