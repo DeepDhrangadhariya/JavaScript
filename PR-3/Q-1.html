@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+
+
+function findLargestEven(numbers) {
+
+  var evenNumbers = numbers.filter(function (number) {
+    return number % 2 === 0
+  })
+
+
+  return evenNumbers[evenNumbers.length * (evenNumbers.length > 0) - 1] || -1
+}
+
+
+var numbersArray = [3, 8, 2, 5, 10, 7]
+console.log(findLargestEven(numbersArray))
+
+</script>
