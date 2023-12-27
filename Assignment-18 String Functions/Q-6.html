@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-6</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let ans
+
+    function toggle(String){
+
+        for(let i=0 ; i < String.length ; i++){
+            if(String[i] >= 'a' && String[i] <= 'z'){
+                ans = String.charAt(i)-=32
+            }else if(String.charAt(i) >= 'a' && String.charAt(i) <= 'z'){
+                ans = String.charAt(i)+=32
+            }else{
+                console.log("Something Went Wrong !!")
+            }
+    }
+
+        return ans
+
+    }
+
+    let s = "hElLo WoRlD"
+    console.log("Toggle Case Is : " + toggle(s))
+
+</script>
