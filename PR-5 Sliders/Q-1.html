@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function findBooks(library,year){
+
+    let titlesOfBooks = []
+
+    for (let index in library) {
+    let book = library[index];
+    
+    if (book.year < year) {
+      titlesOfBooks.push(book.title);
+    }
+  }
+
+  return titlesOfBooks
+
+}
+
+let library = [
+  { title: 'The 48 Laws of Power', author: 'Robert Greene', year: 1998 },
+  { title: 'Rich Dad Poor Dad', author: 'Robert T. Kiyosaki', year: 1997 },
+  { title: 'Think and Grow Rich', author: 'Napoleon Hill', year: 1937 },
+  { title: 'Cant Hurt Me', author: 'David Goggins', year: 2018 },
+  { title: 'The Psychology Of Money', author: 'Morgan Housel', year: 2020 },
+];
+
+let year = 2000
+let titlesOfYear = findBooks(library, year);
+
+console.log(titlesOfYear);
+
+</script>
