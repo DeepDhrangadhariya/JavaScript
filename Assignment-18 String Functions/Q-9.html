@@ -13,16 +13,31 @@
 <script>
 
 let emptyArray = []
+let max
+let min
 
-for(let i = 0; i < 11; i++){
+for(let i = 0; i < 10; i++){
 
-    emptyArray[i] = Math.ceil(Math.random() * 100)
-    
+    emptyArray.push(Math.ceil(Math.random() * 100))
 
 }
 
-emptyArray = Math.max
+console.log("Random Array : " + emptyArray)
 
-console.log(emptyArray)
+max = emptyArray[0]
+
+min = emptyArray[0]
+
+for(let i = 0; i < emptyArray.length; i++){
+
+    max = Math.max(max, emptyArray[i])
+
+    min = Math.min(min, emptyArray[i])
+
+}
+
+console.log("Maximum Of Array : " + max)
+
+console.log("Minimum Of Array : " + min)
 
 </script>
