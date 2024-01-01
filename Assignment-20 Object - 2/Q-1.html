@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let person = [
+
+        {
+
+            firstname : "Deep",
+            lastname : "Gajjar",
+            age : 21 
+
+        },
+
+        {
+
+            firstname : "Brijesh",
+            lastname : "Bhuva",
+            age : 20
+
+        },
+
+        {
+
+            firstname : "Naitik",
+            lastname : "Vinchhi",
+            age : 23
+
+        },
+
+        {
+
+            firstname : "Het",
+            lastname : "Patel",
+            age : 20
+
+        }
+
+    ]
+
+    for(let i = 0; i < person.length; i++){
+
+        let people = person[i]
+
+        console.log(`Person ${i + 1}:`)
+
+        for(let k in people){
+
+            console.log(k + " : " + people[k])
+
+        }
+
+        console.log("\n")
+
+    }
+</script>
