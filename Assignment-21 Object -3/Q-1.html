@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function categorizedByMarks(){
+
+        let ar = []
+
+        for(let k in students){
+        
+            if(students[k].mark > 90){
+
+              ar.push(students[k].sname)
+
+            }
+
+        }
+
+        return ar
+
+    }
+
+    let students = [
+
+        {
+            sname : "Deep Gajjar",
+            mark : 99
+        },
+        {
+            sname : "Brijesh Bhuva",
+            mark : 70
+        },
+        {
+            sname : "Jashraj Jadeja",
+            mark : 91
+        },
+        {
+            sname : "Akshay Tada",
+            mark : 94
+        },
+        {
+            sname : "Naitik",
+            mark : 85
+        },
+        {
+            sname : "Mia Bhai",
+            mark : 93
+        },
+        {
+            sname : "Jigabhai Patel",
+            mark : 88
+        }
+
+    ]
+
+    console.log(categorizedByMarks())
+
+</script>

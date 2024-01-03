@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-3</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    
+    function affordableBooks(){
+
+        let budgetBooks = []
+
+        for(let key in library){
+
+            if(library[key].price < 60){
+
+                budgetBooks.push(library[key].title)
+
+            }
+
+        }
+
+        return budgetBooks
+
+    }
+
+    let library = [
+
+        {
+            title: 'The 48 Laws of Power',
+            author: 'Robert Greene',
+            price: 40 
+        },  
+        {
+            title: 'Rich Dad Poor Dad',
+            author: 'Robert T. Kiyosaki',
+            price: 50 
+        },  
+        {
+            title: 'Think and Grow Rich',
+            author: 'Napoleon Hill',
+            price: 58 
+        },  
+        {
+            title: 'Cant Hurt Me',
+            author: 'David Goggins',
+            price: 65 
+        },  
+        {
+            title: 'The Psychology Of Money',
+            author: 'Morgan Housel',
+            price: 70 
+        }
+
+    ]
+
+    console.log(affordableBooks())
+
+</script>
