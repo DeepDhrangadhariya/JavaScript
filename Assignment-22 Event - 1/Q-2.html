@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+
+    <style>
+        *{
+            background-color: coral;
+            margin: 0;
+            padding: 0;
+            /* color: white; */
+        }
+
+        .b0{
+            display: flex;
+            justify-content: space-evenly;
+            
+            
+        }
+
+        .b1{
+            border: 2px solid blue;
+            color: red;
+            background-color: blue;
+            font-size: 30px;
+            padding: 20px;
+            text-shadow: 1px 2px 6px black;
+            box-shadow: 0px 0px 20px black;
+        }
+        .b2{
+            border: 2px solid black;
+            background-color: black;
+            color: yellow;
+            font-size: 30px;
+            padding: 20px;
+            text-shadow: 2px 3px 3px gray;
+            box-shadow: 0px 0px 20px black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <center>
+
+        <br><hr><br><br>
+        <div class="b0">
+
+            <button class="b1" id="btn1">For Coloring Odd Paragraphs</button>
+            <button class="b2" onclick="evenYellow()" id="btn2">For Coloring Even Paragraphs</button>
+
+        </div>
+<br><br><hr> 
+        
+
+        <h2 class="odd">Lorem ipsum dolor sit amet consectetur adipisicing elit. In modi eos eaque porro dolor, aperiam vel autem, consequatur et rerum eum expedita cum. Harum nobis, dolores atque tempora mollitia dolorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit similique et pariatur dolores commodi dignissimos eaque dolorem explicabo? Voluptatem quae cumque obcaecati qui rerum odio aspernatur labore sapiente natus pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti facilis cumque laborum necessitatibus quidem porro, consequatur maiores suscipit perspiciatis illo temporibus, dignissimos fugiat laudantium. Velit ea voluptas adipisci necessitatibus sit?</h2>
+
+        <br><br><br> <hr> <br>
+
+        <h2 class="even">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, soluta minus officiis at qui delectus dolor rerum consectetur voluptatem quibusdam libero assumenda ratione quidem dolorem accusantium sunt, corrupti ea excepturi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus quae laudantium quidem, nostrum molestias nobis commodi tempore quibusdam inventore debitis, maxime nemo ab nulla quas cum unde optio eius repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, labore assumenda, doloremque quibusdam iusto tempore reprehenderit, eaque cumque doloribus magnam molestiae ipsa error quo libero dignissimos? Rerum omnis nemo pariatur.</h2>
+
+        <br><br><br> <hr> <br>
+
+        <h2 class="odd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illum dicta facilis iure consectetur repudiandae fuga culpa inventore excepturi nemo corrupti, minima omnis doloribus nisi quo animi atque perspiciatis ad! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque non voluptas sint doloremque est corporis itaque. Aut quasi ipsa quisquam recusandae, odio est delectus ducimus tenetur inventore fugiat distinctio! Pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laudantium animi aspernatur voluptate. Quae eos neque, exercitationem voluptatum illo, recusandae veniam nam iste quasi eius, voluptates alias temporibus quidem mollitia?</h2>
+
+        <br><br><br> <hr> <br>
+
+        <h2 class="even">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio commodi excepturi molestiae. Voluptatibus, fugit fugiat omnis alias, commodi odit fuga dolorem repudiandae totam autem vitae dolorum nam facere eligendi a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae doloremque omnis dolorum esse, explicabo hic fugit nisi distinctio voluptatibus magni maiores qui laborum, earum vel sit cupiditate aliquid saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat similique ipsum accusamus? Facilis, molestias, rem libero repudiandae labore in consequuntur, illo similique distinctio hic a cupiditate unde temporibus vel.</h2>
+
+        <br><br><br> <hr> <br>
+
+        <h2 class="odd">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut nostrum enim explicabo voluptatibus velit animi dicta nobis saepe. Nostrum eaque nemo unde fugiat ipsa, voluptatum perferendis aperiam quisquam aspernatur. Esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quam corrupti modi id magnam facilis dolorum iure laudantium, quaerat, possimus excepturi vel necessitatibus, sequi ea at deleniti nesciunt inventore quae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laudantium dolores atque, aliquam consequuntur sapiente beatae amet illo dolorem enim deserunt minima quibusdam error fugiat sequi corporis veniam tempore officiis.</h2>
+
+        <br><br><br> <hr> <br>
+
+        <h2 class="even">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque unde obcaecati, similique nesciunt harum! Officiis repellendus, neque perspiciatis, dolorem iusto, eius inventore quos libero facere temporibus error blanditiis perferendis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio temporibus quia quaerat laudantium recusandae, libero accusamus ratione culpa tenetur possimus ipsum ex facilis consectetur voluptas inventore cum nulla maxime sequi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam dicta ea ipsum vero neque reprehenderit, expedita aliquam culpa ullam suscipit placeat optio magnam, sequi veritatis alias hic, eos distinctio voluptatum.</h2>
+
+        <br><br><br> <hr> <br>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    document.getElementById("btn1").addEventListener("click",oddRed)
+
+    function oddRed(){
+
+        var red = document.querySelectorAll('.odd')
+
+        for(let i in red)
+        {
+            red[i].style.color = "red"
+            red[i].style.backgroundColor = "blue"
+            red[i].style.textShadow = "2px 3px 3px black"
+        }
+
+    }
+
+    function evenYellow()
+    {
+        var yellow = document.querySelectorAll('.even')
+
+        for(let j in yellow)
+        {
+            yellow[j].style.color = "yellow"
+            yellow[j].style.backgroundColor = "black"
+            yellow[j].style.textShadow = "2px 3px 3px gray"
+        }
+    }
+</script>
