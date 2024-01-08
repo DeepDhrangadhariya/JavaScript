@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Enter Your Age</h2>
+        <input type="text" id="t1">
+
+        <br><br><br>
+
+        <h1>Press The Following Button For Check Your Driving Status</h1>
+        <button id="check" onclick="drive()">Click Here !</button>
+
+        <br><br><br><br>
+
+        <h3 id="result">Get Result Here</h3>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let age = parseInt(document.getElementById("t1").value)
+
+    function drive()
+    {
+        if(age > 18 && age > 0)
+        {
+            document.getElementById("result").innerHTML = "You can drive in India!"
+        }
+        else if(age < 18 && age > 0)
+        {
+            document.getElementById("result").innerHTML = "You can't drive in India!"
+        }
+        else if(age === 18 && age > 0)
+        {
+            document.getElementById("result").innerHTML = "You are just old enough to drive in India!"
+        }
+        else if(age <= 0)
+        {
+            document.getElementById("result").innerHTML = "Go Born First!!"
+        }
+        else
+        {
+            document.getElementById("result").innerHTML = "You Are Under Arrest!!!!!!!!!!"
+        }
+    }
+
+</script>

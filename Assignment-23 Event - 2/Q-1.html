@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Enter First Value</h2>
+        <input type="text" id="val1">
+
+        <br><br><br>
+
+        <h2>Enter Second Value</h2>
+        <input type="text" id="val2">
+
+        <br><br><br>
+
+        <h2>Enter Third Value</h2>
+        <input type="text" id="val3">
+
+        <br><br><br>
+
+        <h2>Enter Forth Value</h2>
+        <input type="text" id="val4">
+
+        <br><br><br>
+
+        <h1>Press The Following Button</Button></h1>
+
+        <button id="btn1">Add</button>
+        <button id="btn2">Subtract</button>
+        <button id="btn3" onclick="mul()">Multiply</button>
+        <button id="btn4" onclick="div()">Divide</button>
+
+        <br><br><br><br>
+
+        <h3 id="result">Get Result Here</h3>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let one = parseInt(document.getElementById("val1").value)
+    let two = parseInt(document.getElementById("val2").value)
+    let three = parseInt(document.getElementById("val3").value)
+    let four = parseInt(document.getElementById("val4").value)
+
+    let addition = document.getElementById("btn1").addEventListener("click",add)
+    let subtraction = document.getElementById("btn2").addEventListener("click",sub)
+
+    function add()
+    {
+        let plus = one + two + three + four
+
+        document.getElementById("result").innerHTML = "Addition Of Four Numbers Is : " + plus
+    }
+
+    function sub()
+    {
+        let minus = one - two - three - four
+
+        document.getElementById("result").innerHTML = "Subtraction Of Four Numbers Is : " + minus
+    }
+
+    function mul()
+    {
+        let x = one * two * three * four
+        document.getElementById("result").innerHTML = "Multiplication Of Four Numbers Is : " + x
+    }
+
+    function div()
+    {
+        let d1 = one / two
+        let d2 = three / four
+
+        document.getElementById("result").innerHTML = "Division Of First Two Numbers : " + d1 + "<br>" + "Division Of Last Two Numbers : " + d2
+    }
+
+</script>
