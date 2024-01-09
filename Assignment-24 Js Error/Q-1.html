@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function emailValidation(email)
+    {
+        if(!email.includes("@"))
+        {
+            throw new Error ("@ Missing In Your Email Address")
+        }
+        else
+        {
+            console.log(email + " Is Valid Email Address")
+        }
+    }
+
+    try
+    {
+        emailValidation("deepgajjar.gmail.com")
+    }
+    catch(i)
+    {
+        console.log("Error : " + i.message)
+    }
+    
+</script>

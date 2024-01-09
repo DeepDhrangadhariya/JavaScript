@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-4</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function divisionNumber(a,b)
+    {
+        if(b <= 0)
+        {
+            throw new Error ("Number Not Divisible By 0")
+        }
+        else
+        {
+            console.log(`Division Of ${a} & ${b} Is : ${a/b}`)
+        }
+    }
+
+    try
+    {
+        divisionNumber(10,0)
+    }
+    catch(d)
+    {
+        console.log("Error: ",d.message)
+    }
+
+</script>

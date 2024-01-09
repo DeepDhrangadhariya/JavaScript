@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function emptyChecher(string)
+    {
+        if(string == "")
+        {
+            throw new Error ("String Must Contain Some Characters")
+        }
+        else
+        {
+            console.log("Your Valid String Is : ", string)
+        }
+    }
+
+    try
+    {
+        emptyChecher("")
+    }
+    catch(e)
+    {
+        console.log("Error : ", e.message)
+    }
+
+</script>
