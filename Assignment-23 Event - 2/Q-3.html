@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-3</title>
+</head>
+<body>
+
+    <center>
+
+        <h1 id="firstname">Your First Name</h1>
+        <div id="lastname">Your Last Name</div>
+        <p id="fullname">Your Full Name</p>
+    <hr/>
+        <button onclick="setFirstName()">FIRST NAME</button>
+        <button onclick="setLastName()">LAST NAME</button>
+        <button onclick="setFullName()">FULL NAME</button>
+        <button onclick="resetDefaults()">RESET TO DEFAULTS</button>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    // let fn = "Deep"
+    // let ln = "Gajjar"
+    // let full = "Deep Gajjar"
+
+    function setFirstName()
+    {
+        let fn = document.getElementById("firstname").innerHTML = "Deep"
+    }
+
+    function setLastName()
+    {
+        let ln = document.getElementById("lastname").innerHTML = "Gajjar"
+    }
+
+    function setFullName()
+    {
+        let full = document.getElementById("fullname").innerHTML = "Deep Gajjar"
+    }
+
+    function resetDefaults()
+    {
+        document.getElementById("firstname").innerHTML = ""
+        document.getElementById("lastname").innerHTML = ""
+        document.getElementById("fullname").innerHTML = ""
+    }
+
+</script>
