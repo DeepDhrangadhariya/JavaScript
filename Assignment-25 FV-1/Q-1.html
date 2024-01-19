@@ -8,17 +8,33 @@
 <body>
 
     <center>
+        <fieldset>
+            <legend style="color: green; font-size: larger;">Form Validation</legend>
+            <form id="formValidation">
 
-        <form id="formValidation">
+                <label for="">Name</label><br>
+                <input type="text" id="name"><br><br><br>
+    
+                <label for="">Phone Number</label><br>
+                <input type="tel" id="phone_number"><br><br><br>
+    
+                <label for="">Email</label><br>
+                <input type="email" id="email"><br><br><br>
+                
+                <label for="">Password</label><br>
+                <input type="password" id="password"><br><br><br>
+    
+                <label for="">Confirm Password</label><br>
+                <input type="password" id="confirm_password"><br><br><br>
+    
+                <button type="submit">Submit</button><br><br><br>
+    
+                <h4 id="for_error" style="color: red;"></h4>
+    
+            </form>
+        </fieldset>
 
-            <label for=""></label>
-            
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-
-        </form>
+        
 
     </center>
     
@@ -27,6 +43,49 @@
 
 <script>
 
+    document.getElementById("formValidation").onsubmit = function(event)
+    {
+        try
+        {
+            let name = document.getElementById("name").value
+            let phone = document.getElementById("phone_number").value
+            let email = document.getElementById("email").value
+            let pass = document.getElementById("password").value
+            let confirmPassword = document.getElementById("confirm_password").value
 
+            if(/\d/.test(name))
+            {
+                throw new Error ("Invalid Name")
+            }
+            if(!/\d{10}$/.test(phone))
+            {
+                throw new Error ("Invalid Phone Number")
+            }
+            if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email))
+            {
+                throw new Error ("Invalid Email Address")
+            }
+            if(pass == "")
+            {
+                throw new Error ("Enter A Password")
+            }
+            if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(pass))
+                {
+                    throw new Error (`Password Must Contain${"<br>"}- One Upper Case Letter,${"<br>"}- One Lower Case Letter,${"<br>"}- One Special Character,${"<br>"}- Three Numbers,${"<br>"}- Atleast 8 Length Of Password`)
+                }
+            if(pass != confirmPassword)
+            {
+                throw new Error ("Password Does Not Match")
+            }
+
+            alert("Successfull!")
+        }
+
+        catch(err)
+        {
+            event.preventDefault()
+            document.getElementById("for_error").innerHTML = err.message
+        }
+    }
 
 </script>
