@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    class Person
+    {
+        constructor(name)
+        {
+            this.n = name
+        }
+    }
+
+    class childPerson extends Person
+    {
+        constructor(name,age)
+        {
+            super(name)
+            this.a = age
+        }
+
+        personInfo()
+        {
+            console.log(`Name = ${this.n} Age = ${this.a}`)
+        }
+    }
+
+    let firstPerson = new childPerson("Deep",20)
+
+    firstPerson.personInfo()
+
+</script>

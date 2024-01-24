@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    class Car
+    {
+        constructor(Brand, Model, Year)
+        {
+            this.B = Brand
+            this.M = Model
+            this.Y = Year
+        }
+    }
+
+    class childCar extends Car
+    {
+        constructor(Brand, Model, Year, Color)
+        {
+            super(Brand,Model,Year)
+            this.C = Color
+        }
+    }
+
+    let firstCar = new childCar("Hundai","Verna",2022,"Black")
+
+    console.log(firstCar)
+
+</script>
