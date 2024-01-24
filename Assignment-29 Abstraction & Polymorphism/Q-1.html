@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    class Shape
+    {
+        calculateArea()
+        {
+            return "Area Of Circle, Rectangle And Square"
+        }
+    }
+
+    class Circle extends Shape
+    {
+        calculateArea(radius)
+        {
+            return Math.PI * radius * radius
+        }
+    }
+
+    class Rectangle extends Shape
+    {
+        calculateArea(width,length)
+        {
+            return width * length
+        }
+    }
+
+    class Square extends Shape
+    {
+        calculateArea(side)
+        {
+            return side * side
+        }
+    }
+
+    const base = new Shape
+    console.log(base.calculateArea())
+
+    const c = new Circle
+    const resultOfC = c.calculateArea(2)
+    console.log(`The area of the circle is ${resultOfC}`)
+
+    const r = new Rectangle
+    const resultOfR = r.calculateArea(5,5)
+    console.log(`The area of the rectangle is ${resultOfR}`)
+
+    const s = new Square
+    const resultOfS = s.calculateArea(3)
+    console.log(`The area of the square is ${resultOfS}`)
+
+</script>

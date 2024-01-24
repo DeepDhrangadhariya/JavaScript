@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-3</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    class Food
+    {
+        cook()
+        {
+            return "Methods Of Cooking Pizza, Sushi And Burger"
+        }
+    }
+
+    class Pizza{
+        cook()
+        {
+            return "Pizza Recipe\n\n-Step 1 Prepare the pizza dough.\n-Step 2 Prepare the pizza base.\n-Step 3 Chop all the vegetables for the pizza.\n-Step 4 Spread the sauce and veggies on the base.\n-Step 5 Bake the pizza at 250 degree Celsius for 10 minutes"
+        }
+    }
+
+    class Sushi
+    {
+        cook()
+        {
+            return "Sushi Recipe\n\n-Step 1 Gather all ingredients. Preheat the oven to 300 degrees F (150 degrees C).\n-Step 2 Bring water to a boil in a medium pot; stir in rice. Reduce heat to medium-low, cover, and simmer until rice is tender and water has been absorbed, 20 to 25 minutes.\n-Step 3 Mix rice vinegar, sugar, and salt in a small bowl. Gently stir into cooked rice in the pot and set aside.\n-Step 4 Lay nori sheets on a baking sheet.\n-Step 5 Heat nori in the preheated oven until warm, 1 to 2 minutes.\n-Step 6 Center 1 nori sheet on a bamboo sushi mat. Use wet hands to spread a thin layer of rice on top. Arrange 1/4 of the crabmeat, avocado, cucumber, and pickled ginger over rice in a line down the center.\n-Step 7 Lift one end of the mat and roll it tightly over filling to make a complete roll. Repeat with remaining ingredients.\n-Step 8 Use a wet, sharp knife to cut each roll into 4 to 6 slices."
+        }
+    }
+
+    class Burger
+    {
+        cook()
+        {
+            return "Burger Recipe\n\n-Step 1 Pressure cook carrots, peas and corn.\n-Step 2 Add the spices.\n-Step 3 Add mashed potatoes.\n-Step 4 Shallow fry the patties.\n-Step 5 Keep aside.\n-Step 6 Prepare the burger.\n-Step 7 Add slices onions, cucumber and tomatoes.\n-Step 8 Burger is ready.\n-Step 9 Serve!"
+        }
+    }
+
+    const base = new Food
+    const p = new Pizza
+    const s = new Sushi
+    const b = new Burger
+
+    console.log(base.cook())
+    console.log(p.cook())
+    console.log(s.cook())
+    console.log(b.cook())
+
+</script>
