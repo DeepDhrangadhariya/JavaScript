@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    class Shape
+    {
+        draw()
+        {
+            return "\nDrawing Shapes.......\n\n"
+        }
+    }
+
+    class Circle extends Shape
+    {
+        draw()
+        {
+            return "Drawing Circle"
+        }
+    }
+
+    class Square extends Shape
+    {
+        draw()
+        {
+            return "Drawing Square"
+        }
+    }
+
+    const base = new Shape
+    const C = new Circle
+    const S = new Square
+
+    console.log(base.draw())
+    console.log(C.draw())
+    console.log(S.draw())
+
+</script>

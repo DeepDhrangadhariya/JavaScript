@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    class Instrument
+    {
+        playSound()
+        {
+            return "\nPlaying Sounds......\n\n"
+        }
+    }
+
+    class Guitar extends Instrument
+    {
+        playSound()
+        {
+            return "Strumming The Guitar Strings"
+        }
+    }
+
+    class Piano extends Instrument
+    {
+        playSound()
+        {
+            return "Pressing The Piano Keys"
+        }
+    }
+
+    const base = new Instrument
+    const G = new Guitar
+    const P = new Piano
+
+    console.log(base.playSound())
+    console.log(G.playSound())
+    console.log(P.playSound())
+
+</script>
