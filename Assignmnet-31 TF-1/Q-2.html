@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+
+    <style>
+
+        img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <center>
+
+        <img src="image/img1.jpg" alt="">
+        <img src="image/img2.jpg" alt="">
+        <button onclick="clear()">clearInterval</button>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let slides = document.querySelectorAll("img")
+    let count = 0
+    let Interval
+
+    function displaySlides(index)
+    {
+        for(let i = 0; i < slides.length; i++)
+        {
+            slides[i].style.display = "none"
+        }
+        slides[index].style.display = "block"
+    }
+
+    function clear()
+    {
+        clearInterval(Interval)
+    }
+
+    function runSlides()
+    {
+        Interval = setInterval(()=>{
+            displaySlides(count)
+            count++
+            if(count >= slides.length)
+            {
+                count = 0
+            }
+        },2000)
+    }
+
+    
+
+    runSlides()
+    displaySlides(count)
+
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+
+    <style>
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/cd0f278b76664ba6.jpeg?q=20" alt="">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/399d6f9c9ec27f34.jpg?q=20" alt="">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/85f61f9d37106724.jpeg?q=20" alt="">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/4a1336fc1fb3bfb2.jpeg?q=20" alt="">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/9021283f0be266c1.jpg?q=20" alt="">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/36edcda6bdf9ca8a.jpg?q=20" alt="">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/0f9ecd9ce4f86cfa.jpg?q=20" alt="">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/c0057d69caf88770.jpeg?q=20" alt="">
+
+        <button onclick="stop()">Stop Slides</button>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let sliders = document.querySelectorAll("img")
+    let Sindex = 0
+    let Interval
+
+    function display(i)
+    {
+        for(let i = 0; i < sliders.length; i++)
+        {
+            sliders[i].style.display = "none"
+        }
+        sliders[i].style.display = "block"
+    }
+
+    function run()
+    {
+        Interval = setInterval(()=>{
+            display(Sindex)
+            Sindex++
+            if(Sindex >= sliders.length)
+            {
+                Sindex = 0
+            }
+        },1500)
+    }
+
+    function stop()
+    {
+        clearInterval(Interval)
+    }
+
+    run()
+    display(Sindex)
+
+</script>
