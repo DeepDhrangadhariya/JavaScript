@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .main{
+            width: 78%;
+            height: 560px;
+            margin-top: 5%;
+            /* border: 1px solid black; */
+            background: url(image/image-108.jpg) no-repeat center center/cover;
+            display: flex;
+        }
+        .submain{
+            width: 61.5%;
+            height: 28%;
+            /* border: 1px solid black; */
+            margin-top: 14%;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 17%;
+            
+        }
+        .count{
+            width: 23%;
+            height: 98%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .num{
+            font-size:50px;
+            margin-bottom: 60%;
+            font-family: arial;
+            color: #4d4d4d;
+        }
+        .para{
+            font-size: 35px;
+            font-family: arial;
+            color: #4d4d4d;
+            margin-top: -50%;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <div class="main">
+            <div class="submain">
+                <div class="count">
+                    <h2 class="num" id="c1">02</h2>
+                    <h3 class="para">Days</h3>
+                </div>
+                <div class="count">
+                    <h2 class="num" id="c2">23</h2>
+                    <h3 class="para">Hours</h3>
+                </div>
+                <div class="count">
+                    <h2 class="num" id="c3">48</h2>
+                    <h3 class="para">Minutes</h3>
+                </div>
+                <div class="count">
+                    <h2 class="num" id="c4"></h2>
+                    <h3 class="para">Seconds</h3>
+                </div>
+            </div>
+        </div>
+    </center>
+
+</body>
+</html>
+
+<script>
+
+    var countDown = document.getElementById("c4")
+    var count = "00"
+    var count59 = 60
+    // var stop
+    countDown.innerHTML = count
+
+    stop = setInterval(()=>{
+        count59--
+        countDown.innerHTML = count59
+        
+        if(count59 <= 0){
+            // count = 60
+            countDown.innerHTML = count
+            clearInterval(stop)
+            
+        }
+        
+    },1000)
+
+
+
+</script>
