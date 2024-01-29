@@ -16,17 +16,38 @@
         .main {
             width: 90%;
             height: 200px;
-            border: 1px solid black;
+            /* border: 1px solid black; */
+            margin-top: 15%;
+            box-shadow: 0px 0px 8px black;
+            border-radius: 50px 50px 50px 50px;
             display: grid;
             grid-template-columns: repeat(6, 1fr);
         }
 
         .submain {
             height: inherit;
-            border: 1px solid red;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         i{
             font-size: 70px;
+            color: #58e9d5;
+        }
+        .ttl{
+            font-family: arial;
+        }
+        .num_div{
+            width: 100px;
+            height: 30px;
+            border: 1px solid #e9ecef;
+            background-color: #e9ecef;
+            border-radius: 20px 20px 20px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -38,16 +59,119 @@
                 <i class="bi bi-buildings"></i>
                 <h3 class="ttl">Real Estate</h3>
                 <div class="num_div">
-                    <p></p>
+                    <h3 class="ttl" id="c1">0000</h3>
                 </div>
             </div>
-            <div class="submain"></div>
-            <div class="submain"></div>
-            <div class="submain"></div>
-            <div class="submain"></div>
-            <div class="submain"></div>
+            <div class="submain">
+                <i class="fa-solid fa-book"></i>
+                <h3 class="ttl">Books & Magazines</h3>
+                <div class="num_div">
+                    <h3 class="ttl" id="c2">0000</h3>
+                </div>
+            </div>
+            <div class="submain">
+                <i class="fa-solid fa-couch"></i>
+                <h3 class="ttl">Furniture</h3>
+                <div class="num_div">
+                    <h3 class="ttl" id="c3">0000</h3>
+                </div>
+            </div>
+            <div class="submain">
+                <i class="fa-regular fa-lightbulb"></i>
+                <h3 class="ttl">Electronics</h3>
+                <div class="num_div">
+                    <h3 class="ttl" id="c4">0000</h3>
+                </div>
+            </div>
+            <div class="submain">
+                <i class="ri-roadster-line"></i>
+                <h3 class="ttl">Cars & Vehicles</h3>
+                <div class="num_div">
+                    <h3 class="ttl" id="c5">0000</h3>
+                </div>
+            </div>
+            <div class="submain">
+                <i class="fa-solid fa-pizza-slice"></i>
+                <h3 class="ttl">Other</h3>
+                <div class="num_div">
+                    <h3 class="ttl" id="c6">0000</h3>
+                </div>
+            </div>
         </div>
     </center>
 </body>
 
 </html>
+
+<script>
+
+    var first = document.getElementById("c1")
+    var second = document.getElementById("c2")
+    var third = document.getElementById("c3")
+    var forth = document.getElementById("c4")
+    var fifth = document.getElementById("c5")
+    var sixth = document.getElementById("c6")
+    var c1 = 0,c2 = 0,c3 = 0,c4 = 0,c5 = 0,c6 = 0
+
+    var fcounter = setInterval(()=>{
+        c1++
+        first.innerHTML = c1
+
+        if(c1 == 3921)
+        {
+            first.innerHTML = 3921
+            clearInterval(fcounter)
+        }
+    },)
+
+    var scounter = setInterval(()=>{
+        c2++
+        second.innerHTML = c2
+
+        if(c2 == 398)
+        {
+            second.innerHTML = 398
+            clearInterval(scounter)
+        }
+    },)
+
+    var tcounter = setInterval(()=>{
+        c3++
+        third.innerHTML = c3
+
+        if(c3 == 1229)
+        {
+            third.innerHTML = 1229
+            clearInterval(tcounter)
+        }
+    },)
+
+    var focounter = setInterval(()=>{
+        c4++
+        forth.innerHTML = c4
+        if(c4 == 32891)
+        {
+            forth.innerHTML = 32891
+            clearInterval(focounter)
+        }
+    },)
+
+    var ficounter = setInterval(()=>{
+        c5++
+        fifth.innerHTML = c5
+        if(c5 == 29221)
+        {
+            fifth.innerHTML = 29221
+            clearInterval(ficounter)
+        }
+    },)
+
+    var sicounter = setInterval(()=>{
+        c6++
+        sixth.innerHTML = c6
+        if(c6 == 219){
+            sixth.innerHTML = 219
+            clearInterval(sicounter)
+        }
+    },)
+</script>
