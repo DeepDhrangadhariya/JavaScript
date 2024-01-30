@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+
+    <center>
+        <fieldset>
+            <legend>Create Account</legend>
+            <form id="signup">
+                <label>Email Address</label><br>
+                <input type="email" id="smail"><br><br>
+                <label>Password</label><br>
+                <input type="password" id="spass"><br><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Login Here</legend>
+            <form id="login">
+                <label>Email</label><br>
+                <input type="email" id="lmail"><br><br>
+                <label>Password</label><br>
+                <input type="password" id="lpass"><br><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </fieldset>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let create = document.getElementById("signup")
+    create.addEventListener("submit",function(event){
+        event.preventDefault()
+        let createEmail = document.getElementById("smail").value
+        let createPassword = document.getElementById("spass").value
+
+        let dataBase = JSON.parse(localStorage.getItem("data")) || []
+        dataBase.push({createEmail,createPassword})
+
+        localStorage.setItem("data",JSON.stringify(dataBase))
+    })
+
+    let login = document.getElementById("login")
+    login.addEventListener("submit",function(event){
+        event.preventDefault()
+        let loginEmail = document.getElementById("lmail").value
+        let loginPassword = document.getElementById("lpass").value
+
+        let dataBase = JSON.parse(localStorage.getItem("data")) || []
+
+        let users = dataBase.find((el)=> loginEmail === el.createEmail && loginPassword === el.createPassword)
+
+        if(users)
+        {
+            alert("successfull Login")
+        }
+        else
+        {
+            alert("Incorrect Email Or Password")
+        }
+    })
+
+</script>
