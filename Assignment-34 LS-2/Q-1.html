@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+
+    <style>
+        #pic{
+            width: 300px;
+            height: 300px;
+        }
+        #main_div{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <div id="main_div"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+    let product = [
+    {
+        id : 1,
+        name : "Iphone",
+        price : 599.99,
+        image : "https://img.myipadbox.com/sec/product_l/MPD4935S.jpg"
+    },
+    {
+        id : 2,
+        name: "Macbook",
+        price: 999.99,
+        image: "https://img.myipadbox.com/upload/store/detail_raw/PC0346S_5.jpg"
+    },
+    {
+        id: 3,
+        name: "Smartwatch",
+        price: 199.99,
+        image: "https://img.myipadbox.com/sec/product_l/SYA002251601E.jpg"
+    },
+    {
+        id: 4,
+        name: "Ipad",
+        price: 399.99,
+        iamge: "https://img.myipadbox.com/sec/product_l/MPD4910H.jpg"
+    }
+]
+
+function showProducts(product)
+{
+    product.map((element)=>{
+        let div = document.createElement("div")
+
+        let img = document.createElement("img")
+        img.setAttribute("src",element.image)
+        img.setAttribute("id","pic")
+
+        let name = document.createElement("h3")
+        name.innerText = element.name
+
+        let cost = document.createElement("h2")
+        cost.innerText = "$ " + element.price
+
+        // let bton = document.createAttribute("button")
+        // bton.innerText = "Add To Cart"
+
+        div.append(img,name,cost)
+
+        document.querySelector("#main_div").append(div)
+    })
+}
+
+showProducts(product)
+</script>
+
