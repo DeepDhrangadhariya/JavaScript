@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    <input type="text" id="search">
+    <button onclick="find()">Search</button><br/>
+    <div id="weatherDetails">
+        <h3 id="w1"></h3>
+        <h3 id="w2"></h3>
+        <h3 id="w3"></h3>
+        <h3 id="w4"></h3>
+        <h3 id="w5"></h3>
+        <h3 id="w6"></h3>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    
+    function find(){
+        let search = document.getElementById("search").value
+        let api = "f82619654f0cb1be59463e843b899873"
+        let city = "rajkot"
+
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&units=metric`)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data) {
+            
+            console.log(data);
+            showWeather(data)
+        })
+    }
+
+    function showWeather(data)
+    {
+        let cloud = document.getElementById("w1")
+        cloud.innerText = "Cloud: " + data.clouds.all
+
+        let min = document.getElementById("w2")
+        min.innerText = "Min Temp: " + data.main.temp_min
+
+        let max = document.getElementById("w3")
+        max.innerText = "Max Temp: " + data.main.temp_max
+
+        let wind = document.getElementById("w4")
+        wind.innerText = "Wind: " + data.wind.speed
+
+        let rise = document.getElementById("w5")
+        rise.innerText = "Sunrise: " + data.sys.sunrise
+
+        let set = document.getElementById("w6")
+        set.innerText = "Sunset: " + data.sys.sunset
+    }
+
+</script>
