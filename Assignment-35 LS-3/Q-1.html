@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+
+    <style>
+
+        #filter{
+            width: 400px;
+            height: 50px;
+            text-align: center;
+        }
+
+        #main{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        #subdiv{
+            /* border: 1px solid black; */
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: 0px 0px 8px black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <select id="filter">
+        <option value="none" selected disabled hidden>Filter</option>
+        <option value="high">High To Low</option>
+        <option value="low">Low TO High</option>
+        <option value="az">A to Z</option>
+        <option value="za">Z to A</option>
+    </select>
+
+    <br><br>
+
+    <center>
+        <div id="main"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let data = [
+        {
+            id: 1,
+            name: "iPhone X",
+            price: 899,
+            image: "https://cdn.dummyjson.com/product-images/2/1.jpg",
+        },
+        {
+            id: 2,
+            name: "MacBook Pro",
+            price: 1749,
+            image: "https://cdn.dummyjson.com/product-images/6/1.png",
+        },
+        {
+            id: 3,
+            name: "Samsung Galaxy Book",
+            price: 1499,
+            image: "https://cdn.dummyjson.com/product-images/7/1.jpg",
+        },
+        {
+            id: 4,
+            name: "HP Pavilion 15-DK1056WM",
+            price: 1099,
+            image: "https://cdn.dummyjson.com/product-images/10/1.jpg",
+        },
+        {
+            id: 5,
+            name: "WD 4TB Gaming External Hard Drive",
+            price: 114,
+            image: "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+        },
+        {
+            id: 6,
+            name: "Samsung 49-Inch 144Hz Gaming Monitor",
+            price: 999.99,
+            image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+        },
+        {
+            id: 7,
+            name: "Smartwatch",
+            price: 199.99,
+            image: "https://img.myipadbox.com/sec/product_l/SYA002251601E.jpg",
+        },
+        {
+            id: 8,
+            name: "Acer SB220Q bi 21.5-Inch Full HD Monitor",
+            price: 599,
+            image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+        }
+
+    ]
+
+    function displayData(data)
+    {
+        document.getElementById("main").innerHTML = ""
+        data.map((el)=>{
+            let div = document.createElement("div")
+            div.setAttribute("id","subdiv")
+
+            let img = document.createElement("img")
+            img.setAttribute("src",el.image)
+            img.setAttribute("id","pic")
+
+            img.style.width = "400px"
+            img.style.height = "400px"
+
+            let name = document.createElement("h4")
+            name.innerHTML = el.name
+
+            let price = document.createElement("h3")
+            price.innerHTML = "$ " + el.price
+
+            div.append(img,name,price)
+
+            document.querySelector("#main").append(div)
+        })
+    }
+
+    displayData(data)
+
+    let filter = document.getElementById("filter")
+    filter.addEventListener("change",()=>
+    {
+        let  f = filter.value
+        let fvalue = []
+
+        if(f === "low"){
+            fvalue = data.slice().sort((a,b)=>a.price - b.price)
+        }
+        else if(f === "high"){
+            fvalue = data.slice().sort((a,b)=>b.price- a.price)
+        }
+        else if(f === "az"){
+            fvalue = data.slice().sort((a,b)=>a.name.localeCompare(b.name))
+        }
+        else if(f === "za"){
+            fvalue = data.slice().sort((a,b)=>b.name.localeCompare(a.name))
+        }
+        displayData(fvalue)
+    })
+
+</script>
