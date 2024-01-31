@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+
+    <style>
+
+        .main{
+            background-color: lightgreen;
+            width: 800px;
+            height: auto;
+        }
+        .submain{
+            width: 500px;
+            height: 400px;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <center>
+        <div class="main">
+            <div class="submain">
+                <h1>Covid-19 Cases</h1>
+                <input type="text" id="search"><br>
+                <button onclick="search()">Search</button><br/>
+                <div id="coronaInfo">
+                    <br>
+                    <h3 id="c1"></h3>
+                    <h3 id="c2"></h3>
+                    <h3 id="c3"></h3>
+                    <h3 id="c4"></h3>
+                    <h3 id="c5"></h3>
+                    <h3 id="c6"></h3>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
+
+<script>
+
+    function search(){
+        let info = document.getElementById("search").value
+        
+        fetch("https://data.covid19india.org/v4/min/data.min.json?authuser=0")
+
+        .then(res => res.json())
+
+        .then(data =>{
+            console.log(data)
+            displayCases(data)
+        })
+    }
+
+    function displayCases(data){
+        var con = document.getElementById("c1")
+        con.innerHTML = "Confirmed Cases: " + data.GJ.delta7.confirmed
+
+        var rec = document.getElementById("c2")
+        rec.innerHTML = "Recovered: " + data.GJ.delta7.recovered
+
+        var test = document.getElementById("c3")
+        test.innerHTML = "Tested: " + data.GJ.delta7.tested
+
+        var deceased = document.getElementById("c4")
+        deceased.innerHTML = "Deceased: " + data.GJ.delta7.deceased
+
+        var population = document.getElementById("c5")
+        population.innerHTML = "population: " + data.GJ.meta.population
+
+        var vac = document.getElementById("c6")
+        vac.innerHTML = "vaccinated: " + data.GJ.delta7.vaccinated1
+    }
+
+</script>
