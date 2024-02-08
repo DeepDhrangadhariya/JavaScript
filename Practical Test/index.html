@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+
+        *{
+            /* background-color: black; */
+            color: white;
+
+        }
+
+        .pic{
+            width: 400px;
+            height: 400px;
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: 0px 0px 8px white;
+        }
+
+        #main{
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 30px;
+
+        }
+
+        .submain{
+
+            background-color: black;
+
+            box-shadow: 0px 0px 12px black;
+            border-radius: 10px 10px 10px 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <center>
+
+        <div id="main">
+            <div class="submain" id="one">
+                <img class="pic" id="ione">
+                <h3 id="tone"></h3>
+                <p id="pone"></p>
+            </div>
+            <div class="submain" id="two">
+                <img class="pic" id="itwo">
+                <h3 id="ttwo"></h3>
+                <p id="ptwo"></p>
+            </div>
+            <div class="submain" id="three">
+                <img class="pic" id="ithree">
+                <h3 id="tthree"></h3>
+                <p id="pthree"></p>
+            </div>
+            <div class="submain" id="four">
+                <img class="pic" id="ifour">
+                <h3 id="tfour"></h3>
+                <p id="pfour"></p>
+            </div>
+            <div class="submain" id="five">
+                <img class="pic" id="ifive">
+                <h3 id="tfive"></h3>
+                <p id="pfive"></p>
+            </div>
+            <div class="submain" id="six">
+                <img class="pic" id="isix">
+                <h3 id="tsix"></h3>
+                <p id="psix"></p>
+            </div>
+            <div class="submain" id="seven">
+                <img class="pic" id="iseven">
+                <h3 id="tseven"></h3>
+                <p id="pseven"></p>
+            </div>
+            <div class="submain" id="eight">
+                <img class="pic" id="ieight">
+                <h3 id="teight"></h3>
+                <p id="peight"></p>
+            </div>
+        </div>
+
+    </center>
+
+</body>
+</html>
+
+<script>
+
+fetch('https://dummyjson.com/products')
+.then(res => res.json())
+.then(json => {console.log(json)
+            displayData(json)});
+
+
+function displayData(data){
+        var firstImg = document.getElementById("ione")
+        firstImg.setAttribute("src",data.products[1].thumbnail)
+
+        var firstTitle = document.getElementById("tone")
+        firstTitle.innerHTML = data.products[1].title
+
+        var firstPrice = document.getElementById("pone")
+        firstPrice.innerHTML = "$ " + data.products[1].price
+
+
+
+        var secondImg = document.getElementById("itwo")
+        secondImg.setAttribute("src",data.products[5].thumbnail)
+
+        var secondTitle = document.getElementById("ttwo")
+        secondTitle.innerHTML = data.products[5].title
+
+        var secondPrice = document.getElementById("ptwo")
+        secondPrice.innerHTML = "$ " + data.products[5].price
+
+
+
+        var threeImg = document.getElementById("ithree")
+        threeImg.setAttribute("src",data.products[6].thumbnail)
+
+        var threeTitle = document.getElementById("tthree")
+        threeTitle.innerHTML = data.products[6].title
+
+        var threePrice = document.getElementById("pthree")
+        threePrice.innerHTML = "$ " + data.products[6].price
+
+
+
+        var fourImg = document.getElementById("ifour")
+        fourImg.setAttribute("src",data.products[9].thumbnail)
+
+        var fourTitle = document.getElementById("tfour")
+        fourTitle.innerHTML = data.products[9].title
+
+        var fourPrice = document.getElementById("pfour")
+        fourPrice.innerHTML = "$ " + data.products[9].price
+
+
+
+        var fiveImg = document.getElementById("ifive")
+        fiveImg.setAttribute("src",data.products[3].thumbnail)
+
+        var fiveTitle = document.getElementById("tfive")
+        fiveTitle.innerHTML = data.products[3].title
+
+        var fivePrice = document.getElementById("pfive")
+        fivePrice.innerHTML = "$ " + data.products[3].price
+
+
+
+        var sixImg = document.getElementById("isix")
+        sixImg.setAttribute("src",data.products[4].thumbnail)
+
+        var sixTitle = document.getElementById("tsix")
+        sixTitle.innerHTML = data.products[4].title
+
+        var sixPrice = document.getElementById("psix")
+        sixPrice.innerHTML = "$ " + data.products[4].price
+
+
+
+        var sevenImg = document.getElementById("iseven")
+        sevenImg.setAttribute("src",data.products[7].thumbnail)
+
+        var sevenTitle = document.getElementById("tseven")
+        sevenTitle.innerHTML = data.products[7].title
+
+        var sevenPrice = document.getElementById("pseven")
+        sevenPrice.innerHTML = "$ " + data.products[7].price
+
+
+
+        var eightImg = document.getElementById("ieight")
+        eightImg.setAttribute("src",data.products[8].thumbnail)
+
+        var eightTitle = document.getElementById("teight")
+        eightTitle.innerHTML = data.products[8].title
+
+        var eightPrice = document.getElementById("peight")
+        eightPrice.innerHTML = "$ " + data.products[8].price
+    }
+
+</script>
