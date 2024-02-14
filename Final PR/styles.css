@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin-bottom: 5px;
+  }
+  
+  button {
+    margin-top: 5px;
+  }
+
+  #productList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 10px;
+  }
+
+  #listDiv{
+    border: 1px solid lightgray;
+    border-radius: 20px 20px 20px 20px;
+  }
