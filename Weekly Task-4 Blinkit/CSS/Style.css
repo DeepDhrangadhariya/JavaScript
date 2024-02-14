@@ -1,0 +1,1349 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 86px;
+    width: 100%;
+    border: 1px solid #767676;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index:  1000;
+
+}
+.logo{
+    height: 100%;
+    width: 178px;
+    border: 1px solid #767676;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo h3{
+    font-size: 40px;
+    font-family:  sans-serif;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+.mainhdr{
+    height: 100%;
+    width: 1450px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.mainhdr .location{
+    height: 100%;
+    width: 215px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.location h6{
+    font-size: 18px;
+    font-weight: bold;
+    font-family:  sans-serif;
+    margin-top: 15px;
+}
+.mainhdr .searchbar{
+    height: 100%;
+    width: auto;
+    /* border: 1px solid black; */
+    position: relative;
+}
+ #search{
+    height: 46px;
+    width: 1080px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f8f8f8;
+}
+#search::placeholder{
+    position: absolute;
+    right: 86%;
+    font-size: 15px;
+}
+#search-icon{
+    font-size: 19px;
+    font-weight: bold;
+    position: absolute;
+    left: 27.2%;
+    margin-top: 10px;
+}
+.premium{
+    height: 100%;
+    width: 270px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.premium p{
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.premium .cartbtn{
+    height: 52px;
+    width: 112px;
+    background-color: #0c831f;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 15px;
+    border-radius: 12px;
+    border: none;
+}
+.poster{
+    height: 235px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.poster img{
+    height: auto;
+    width: 1270px;
+}
+.imagebar{
+    height: 225px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagebar .imgpart{
+    height: auto;
+    width: 1270px;
+    /* border: 1px solid black; */
+    
+}
+.imgpart img{
+    height: auto;
+    width: 335px;
+    margin-left: 13px;
+    
+    
+}
+.imagebar-2{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagebar-2 .imgpart-2{
+    height: auto;
+    width: 1270px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.imgpart-2 img{
+    height: 175px;
+    width: auto;
+}
+.slider{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide{
+    height: auto;
+    width: 1270px;
+    /* border: 1px solid black; */
+}
+.slide .heading{
+    margin-top: 20px;
+    font-weight: bold;
+}
+#slidimg{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.cardgroup{
+    height: 300px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.card{
+    height: 285px;
+    width: 180px;
+    /* border: 1px solid black; */
+    position: relative;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+.card .card-img-top{
+    height: 142px;
+    width: 100%;
+}
+.card .card-body{
+    height: 142px;
+    width: 100%;
+}
+.card-title img{
+    height: 12px;
+    width: 12px;
+    margin-top: -3px;
+}
+.card-title p{
+    font-size: 10px;
+    margin-top: -20px;
+    background-color: #f8f8f8;
+    width: 60px;
+}
+.card-title h6{
+    font-size: 13px;
+}
+.card-text{
+    font-size: 13px;
+}
+.price{
+    font-size: 12px;
+    /* margin-top: 23px; */
+    display: block;
+    position: absolute;
+    left: 7%;
+    bottom: 4%;
+}
+ .card-body .btn{
+    font-size: 16px;
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    height: 31px;
+    width: 66px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7fff9;
+    color: #42851f;
+    border-color: #42851f;
+}
+#slidimg2{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+#slidimg3{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+#slidimg4{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.menubar{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menubar .mainmenu{
+    height: auto;
+    width: 1270px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.heading-2{
+    height: 100px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.mainmenu .menuhead{
+    height: 100px;
+    width: 595px;
+    /* border: 1px solid black; */
+    position: relative;
+}
+.menuhead #h5{
+    position: absolute;
+    left: 16.8%;
+}
+#h5-2{
+    margin-left: -140px;
+}
+.mainmenu .extraone{
+    height: 222px;
+    width: auto;
+    /* border: 1px solid black; */
+}
+.extraone ul li{
+    list-style: none;
+    color: #767676;
+    margin-top: 2px;
+}
+#ext{
+    margin-left: -20px;
+}
+footer{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .mainarea{
+    height: 80px;
+    width: 1270px;
+    /* border: 1px solid black; */
+    background-color: #fcfcfc;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .txt{
+    height: auto;
+    width: 1270px;
+    /* border: 1px solid black; */
+}
+.txt p{
+    color: #767676;
+    font-size: 15px;
+}
+.mainarea .company{
+    height: auto;
+    width: auto;
+    /* border: 1px solid black; */
+}
+.company p{
+    font-size: 14px;
+    color: #767676;
+}
+.mainarea .authorized{
+    height: auto;
+    width: 322px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.authorized h6{
+    font-size: 16px;
+    color: #767676;
+}
+.authorized img{
+    height: 30px;
+    width: 90px;
+}
+.mainarea .application{
+    height: auto;
+    width: 303px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.application i{
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+
+
+
+
+@media only screen and (min-width :1700px) and
+    (max-width : 1900px)
+    { 
+    
+    .mainhdr{
+        /* flex-direction: column; */
+        /* align-items: start; */
+        justify-content: space-around;
+        /* height: auto; */
+        width: 1000px;
+    }
+    .logo{
+        /* display: none; */
+    }
+    .premium{
+        width: 300px;
+        justify-content: space-around;
+        /* display: none; */
+    }
+    .mainhdr.searchbar{
+        /* height: auto; */
+        width: 1500px;
+        position: relative;
+        border: 1px solid red;
+    }
+    header{
+        /* position: relative; */
+        height: auto;
+        justify-content: space-around;
+        /* width: 100%; */
+    }
+    .mainhdr.location{
+        /* height: auto; */
+        /* width: auto; */
+        /* position: absolute; */
+        /* left: 0; */
+        
+    }
+     #search{
+        /* position: absolute; */
+        width: 780px;
+        height: 45px;
+        /* margin-left: 10px; */
+    }
+    #search::placeholder{
+        position: absolute;
+        right: 70%;
+        top: 28%;
+    }
+     #search-icon{
+        position: absolute;
+        left: 35%;
+        top: 16%;
+        display: block;
+        /* position: fixed; */
+    }
+    .poster{
+        height: auto;
+        width: 100%;
+    }
+    .poster img{
+        height: auto;
+        width: 1270px;
+    }
+    .imagebar{
+        height: auto;
+        /* row-gap: 20px; */
+    }
+    .imagebar .imgpart{
+        width: 1270px;
+    }
+    .imagebar-2{
+        height: auto;
+        
+    }
+    .imagebar-2 .imgpart-2{
+        height: auto;
+        width: 1270px;
+    }
+    .imgpart img{
+        height: auto;
+        /* width: 90%;   */
+        /* margin-top: 10px; */
+    }
+    .slider{
+        height: auto;
+    }
+    .slider .slide{
+        height: auto;
+        width: 1270px;
+    }
+    #slidimg{
+        height: auto;
+        width: 100%;
+    }
+    .cardgroup{
+        height: auto;
+    }
+    .menubar{
+        height: auto;
+    }
+    .menubar .mainmenu{
+        height: auto;
+        width: 1270px;
+    }.heading-2{
+        width: 100%;
+    }
+    .mainmenu .menuhead{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+   
+    /* .menuhead #h5{
+        position: absolute;
+        left: 50%;
+    }
+    .menuhead #h5-2{
+        position: absolute;
+        left: 40%;
+    } */
+    footer .mainarea{
+        height: auto;
+        width: 1270px;
+    }
+    footer .txt{
+        height: auto;
+        width: 1270px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width :1500px) and
+    (max-width : 1700px)
+    { 
+    
+    .mainhdr{
+        /* flex-direction: column; */
+        /* align-items: start; */
+        justify-content: space-around;
+        /* height: auto; */
+        width: 1000px;
+    }
+    .logo{
+        /* display: none; */
+    }
+    .premium{
+        width: 300px;
+        justify-content: space-around;
+        /* display: none; */
+    }
+    .mainhdr.searchbar{
+        /* height: auto; */
+        /* width: auto; */
+        position: relative;
+        border: 1px solid red;
+    }
+    header{
+        /* position: relative; */
+        height: auto;
+        justify-content: space-between;
+        /* width: 100%; */
+    }
+    .mainhdr.location{
+        /* height: auto; */
+        /* width: auto; */
+        /* position: absolute; */
+        /* left: 0; */
+        
+    }
+     #search{
+        /* position: absolute; */
+        width: 700px;
+        height: 45px;
+        /* margin-left: 10px; */
+    }
+    #search::placeholder{
+        position: absolute;
+        right: 75%;
+        top: 20%;
+    }
+     #search-icon{
+        position: absolute;
+        left: 35%;
+        top: 16%;
+        display: block;
+        /* position: fixed; */
+    }
+    .poster{
+        height: auto;
+        width: 100%;
+    }
+    .poster img{
+        height: auto;
+        width: 1270px;
+    }
+    .imagebar{
+        height: auto;
+        /* row-gap: 20px; */
+    }
+    .imagebar .imgpart{
+        width: 1270px;
+    }
+    .imagebar-2{
+        height: auto;
+        
+    }
+    .imagebar-2 .imgpart-2{
+        height: auto;
+        width: 1270px;
+    }
+    .imgpart img{
+        height: auto;
+        /* width: 90%;   */
+        /* margin-top: 10px; */
+    }
+    .slider{
+        height: auto;
+    }
+    .slider .slide{
+        height: auto;
+        width: 1270px;
+    }
+    #slidimg{
+        height: auto;
+        width: 100%;
+    }
+    .cardgroup{
+        height: auto;
+    }
+    .menubar{
+        height: auto;
+    }
+    .menubar .mainmenu{
+        height: auto;
+        width: 1270px;
+    }.heading-2{
+        width: 100%;
+    }
+    .mainmenu .menuhead{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+   
+    /* .menuhead #h5{
+        position: absolute;
+        left: 50%;
+    }
+    .menuhead #h5-2{
+        position: absolute;
+        left: 40%;
+    } */
+    footer .mainarea{
+        height: auto;
+        width: 1270px;
+    }
+    footer .txt{
+        height: auto;
+        width: 1270px;
+    }
+
+}
+
+
+
+
+
+
+@media only screen and (min-width :1270px) and
+    (max-width : 1500px)
+    { 
+    
+    .mainhdr{
+        /* flex-direction: column; */
+        /* align-items: start; */
+        justify-content: space-around;
+        /* height: auto; */
+        width: 1000px;
+    }
+    .logo{
+        /* display: none; */
+    }
+    .premium{
+        width: 300px;
+        justify-content: space-around;
+        /* display: none; */
+    }
+    .mainhdr.searchbar{
+        /* height: auto; */
+        /* width: auto; */
+        position: relative;
+        border: 1px solid red;
+    }
+    header{
+        /* position: relative; */
+        height: auto;
+        justify-content: space-between;
+        /* width: 100%; */
+    }
+    .mainhdr.location{
+        /* height: auto; */
+        /* width: auto; */
+        /* position: absolute; */
+        /* left: 0; */
+        
+    }
+     #search{
+        /* position: absolute; */
+        width: 550px;
+        height: 45px;
+        /* margin-left: 10px; */
+    }
+    #search::placeholder{
+        position: absolute;
+        right: 68%;
+        top: 20%;
+    }
+     #search-icon{
+        position: absolute;
+        left: 39%;
+        top: 15%;
+        display: block;
+        /* position: fixed; */
+    }
+    .poster{
+        height: auto;
+        width: 100%;
+    }
+    .poster img{
+        height: auto;
+        width: 1270px;
+    }
+    .imagebar{
+        height: auto;
+        /* row-gap: 20px; */
+    }
+    .imagebar .imgpart{
+        width: 1270px;
+    }
+    .imagebar-2{
+        height: auto;
+        
+    }
+    .imagebar-2 .imgpart-2{
+        height: auto;
+        width: 1270px;
+    }
+    .imgpart img{
+        height: auto;
+        /* width: 90%;   */
+        /* margin-top: 10px; */
+    }
+    .slider{
+        height: auto;
+    }
+    .slider .slide{
+        height: auto;
+        width: 1270px;
+    }
+    #slidimg{
+        height: auto;
+        width: 100%;
+    }
+    .cardgroup{
+        height: auto;
+    }
+    .menubar{
+        height: auto;
+    }
+    .menubar .mainmenu{
+        height: auto;
+        width: 1270px;
+    }.heading-2{
+        width: 100%;
+    }
+    .mainmenu .menuhead{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+   
+    /* .menuhead #h5{
+        position: absolute;
+        left: 50%;
+    }
+    .menuhead #h5-2{
+        position: absolute;
+        left: 40%;
+    } */
+    footer .mainarea{
+        height: auto;
+        width: 1270px;
+    }
+    footer .txt{
+        height: auto;
+        width: 1270px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width :1020px) and
+    (max-width : 1270px)
+    { 
+    
+    .mainhdr{
+        /* flex-direction: column; */
+        /* align-items: start; */
+        /* justify-content: space-between; */
+        height: auto;
+        width: auto;
+    }
+    .logo{
+        /* display: none; */
+    }
+    .premium{
+        /* display: none; */
+    }
+    .mainhdr.searchbar{
+        /* height: auto; */
+        /* width: auto; */
+        position: relative;
+        border: 1px solid red;
+    }
+    header{
+        /* position: relative; */
+        height: auto;
+        justify-content: space-evenly;
+        /* width: 100%; */
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index:  1000;
+    }
+    .mainhdr.location{
+        /* height: auto; */
+        /* width: auto; */
+        /* position: absolute; */
+        /* left: 0; */
+        
+    }
+     #search{
+        /* position: absolute; */
+        width: 450px;
+        height: 45px;
+        /* margin-left: 10px; */
+    }
+    #search::placeholder{
+        position: absolute;
+        right: 68%;
+        top: 20%;
+    }
+     #search-icon{
+        position: absolute;
+        left: 37%;
+        top: 15%;
+        display: block;
+        /* position: fixed; */
+    }
+    .poster{
+        height: auto;
+    }
+    .poster img{
+        height: auto;
+        width: 100%;
+    }
+    .imagebar{
+        height: auto;
+        /* row-gap: 20px; */
+    }
+    .imagebar-2{
+        height: auto;
+    }
+    .imagebar-2 .imgpart-2{
+        height: auto;
+        width: 100%;
+    }
+    .imgpart img{
+        height: auto;
+        /* width: 90%;   */
+        /* margin-top: 10px; */
+    }
+    .slider{
+        height: auto;
+    }
+    .slider .slide{
+        height: auto;
+        width: 100%;
+    }
+    #slidimg{
+        height: auto;
+        width: 100%;
+    }
+    .cardgroup{
+        height: auto;
+    }
+    .menubar{
+        height: auto;
+    }
+    .menubar .mainmenu{
+        height: auto;
+        width: 100%;
+    }
+    .mainmenu .menuhead{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    /* .menuhead #h5{
+        position: absolute;
+        left: 50%;
+    }
+    .menuhead #h5-2{
+        position: absolute;
+        left: 40%;
+    } */
+    footer .mainarea{
+        height: auto;
+        width: 100%;
+    }
+    footer .txt{
+        height: auto;
+        width: auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width :980px) and
+    (max-width : 1020px)
+    { 
+    
+    .mainhdr{
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        height: auto;
+    }
+    .logo{
+        display: none;
+    }
+    .premium{
+        display: none;
+    }
+    .mainhdr.searchbar{
+        height: auto;
+        width: auto;
+        position: relative;
+        border: 1px solid red;
+    }
+    header{
+        position: relative;
+        height: auto;
+        justify-content: space-between;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index:  1000;
+    }
+    .mainhdr.location{
+        height: auto;
+        width: auto;
+        position: absolute;
+        left: 0;
+        
+    }
+     #search{
+        /* position: absolute; */
+        width: 400%;
+        height: 45px;
+        margin-left: 10px;
+    }
+    #search::placeholder{
+        position: absolute;
+        right: 60%;
+        top: 20%;
+    }
+     #search-icon{
+        position: absolute;
+        left: 5%;
+        top: 60%;
+        display: block;
+    }
+    .poster{
+        height: auto;
+    }
+    .poster img{
+        height: auto;
+        width: 100%;
+    }
+    .imagebar{
+        height: auto;
+        row-gap: 20px;
+    }
+    .imagebar-2{
+        height: auto;
+    }
+    .imagebar-2 .imgpart-2{
+        height: auto;
+        width: 100%;
+    }
+    .imgpart img{
+        height: auto;
+        width: 90%;
+        margin-top: 10px;
+    }
+    .slider{
+        height: auto;
+    }
+    .slider .slide{
+        height: auto;
+        width: 100%;
+    }
+    #slidimg{
+        height: auto;
+        width: 100%;
+    }
+    .cardgroup{
+        height: auto;
+    }
+    .menubar{
+        height: auto;
+    }
+    .menubar .mainmenu{
+        height: auto;
+        width: 100%;
+    }
+    .menuhead{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .menuhead #h5{
+        position: absolute;
+        left: 50%;
+    }
+    .menuhead #h5-2{
+        position: absolute;
+        left: 40%;
+    }
+    footer .mainarea{
+        height: auto;
+        width: 100%;
+    }
+    footer .txt{
+        height: auto;
+        width: auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width :720px) and
+    (max-width : 980px)
+    { 
+    
+    .mainhdr{
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        height: auto;
+    }
+    .logo{
+        display: none;
+    }
+    .premium{
+        display: none;
+    }
+    .mainhdr.searchbar{
+        height: auto;
+        width: auto;
+        position: relative;
+        border: 1px solid red;
+    }
+    header{
+        position: relative;
+        height: auto;
+        justify-content: space-between;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index:  1000;
+    }
+    .mainhdr.location{
+        height: auto;
+        width: auto;
+        position: absolute;
+        left: 0;
+        
+    }
+     #search{
+        /* position: absolute; */
+        width: 200%;
+        height: 45px;
+        margin-left: 10px;
+    }
+    #search::placeholder{
+        position: absolute;
+        right: 60%;
+        top: 20%;
+    }
+     #search-icon{
+        position: absolute;
+        left: 3%;
+        top: 60%;
+        display: block;
+    }
+    .poster{
+        height: auto;
+    }
+    .poster img{
+        height: auto;
+        width: 100%;
+    }
+    .imagebar{
+        height: auto;
+        row-gap: 20px;
+    }
+    .imagebar-2{
+        height: auto;
+    }
+    .imagebar-2 .imgpart-2{
+        height: auto;
+        width: 100%;
+    }
+    .imgpart img{
+        height: auto;
+        width: 90%;
+        margin-top: 10px;
+    }
+    .slider{
+        height: auto;
+    }
+    .slider .slide{
+        height: auto;
+        width: 100%;
+    }
+    #slidimg{
+        height: auto;
+        width: 100%;
+    }
+    .cardgroup{
+        height: auto;
+    }
+    .menubar{
+        height: auto;
+    }
+    .menubar .mainmenu{
+        height: auto;
+        width: 100%;
+    }
+    .menuhead{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .menuhead #h5{
+        position: absolute;
+        left: 50%;
+    }
+    .menuhead #h5-2{
+        position: absolute;
+        left: 40%;
+    }
+    footer .mainarea{
+        height: auto;
+        width: 100%;
+    }
+    footer .txt{
+        height: auto;
+        width: auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width :480px) and
+    (max-width : 720px)
+    { 
+    
+    .mainhdr{
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        height: auto;
+    }
+    .logo{
+        display: none;
+    }
+    .premium{
+        display: none;
+    }
+    .mainhdr.searchbar{
+        height: auto;
+        width: auto;
+        position: relative;
+        border: 1px solid red;
+    }
+    header{
+        position: relative;
+        height: auto;
+        justify-content: space-between;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index:  1000;
+    }
+    .mainhdr.location{
+        height: auto;
+        width: auto;
+        position: absolute;
+        left: 0;
+        
+    }
+     #search{
+        /* position: absolute; */
+        width: 200%;
+        height: 45px;
+        margin-left: 10px;
+    }
+    #search::placeholder{
+        position: absolute;
+        right: 60%;
+        top: 20%;
+    }
+     #search-icon{
+        position: absolute;
+        left: 5%;
+        top: 60%;
+        display: block;
+    }
+    .poster{
+        height: auto;
+    }
+    .poster img{
+        height: auto;
+        width: 100%;
+    }
+    .imagebar{
+        height: auto;
+        row-gap: 20px;
+    }
+    .imagebar-2{
+        height: auto;
+    }
+    .imagebar-2 .imgpart-2{
+        height: auto;
+        width: 100%;
+    }
+    .imgpart img{
+        height: auto;
+        width: 90%;
+        margin-top: 10px;
+    }
+    .slider{
+        height: auto;
+    }
+    .slider .slide{
+        height: auto;
+        width: 100%;
+    }
+    #slidimg{
+        height: auto;
+        width: 100%;
+    }
+    .cardgroup{
+        height: auto;
+    }
+    .menubar{
+        height: auto;
+    }
+    .menubar .mainmenu{
+        height: auto;
+        width: 100%;
+    }
+    .menuhead{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .menuhead #h5{
+        position: absolute;
+        left: 50%;
+    }
+    .menuhead #h5-2{
+        position: absolute;
+        left: 40%;
+    }
+    footer .mainarea{
+        height: auto;
+        width: 100%;
+    }
+    footer .txt{
+        height: auto;
+        width: auto;
+    }
+
+}
+
