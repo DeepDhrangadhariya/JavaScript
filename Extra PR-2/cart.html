@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+
+    <style>
+
+    #cart{
+        display: grid;
+        /* grid-template-columns: repeat(4,1fr); */
+        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    #pic{
+        border-radius: 20px 20px 20px 20px;
+    }
+    #productdiv{
+        /* border: 1px solid black; */
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 0px 0px 8px black;
+    }
+
+    </style>
+</head>
+<body>
+
+    <center>
+
+        <div id="cart"></div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let products = JSON.parse(localStorage.getItem("cart")) || []
+
+    function displayCart()
+    {
+        products.map((el)=>{
+            let div = document.createElement("div")
+            div.setAttribute("id","productdiv")
+
+            let image = document.createElement("img")
+            image.setAttribute("src",el.image)
+            image.setAttribute("id","pic")
+
+            image.style.width = "400px"
+            image.style.height = "400px"
+
+            let title = document.createElement("h2")
+            title.innerHTML = el.name
+
+            let price = document.createElement("h3")
+            price.innerHTML = "$ " + el.price
+
+            div.append(image,title,price)
+
+            document.getElementById("cart").append(div)
+        })
+    }
+
+    displayCart()
+
+</script>
