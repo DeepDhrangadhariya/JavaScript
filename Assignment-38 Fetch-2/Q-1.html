@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+
+    <center>
+
+        <input type="text" id="search" placeholder="Type Movie Name">
+        <button onclick="fetchData()">Search</button>
+
+        <br><br><br>
+
+        <div id="main"></div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    
+
+    function fetchData()
+    {
+        let name = document.getElementById("search").value
+        let api = "36311a54"
+
+        fetch(`http://www.omdbapi.com/?apikey=${api}&t=${name}`)
+
+        .then(res => res.json())
+        .then(json =>{
+            console.log(json)
+            displayMovie(json)
+        })
+    }
+
+    function displayMovie(json)
+    {
+        document.getElementById("main").innerHTML = ""
+
+        let image = document.createElement("img")
+        image.setAttribute("src",json.Poster)
+
+        let title = document.createElement("h3")
+        title.innerHTML = json.Title
+
+        document.getElementById("main").append(image,title)
+    }
+
+</script>
