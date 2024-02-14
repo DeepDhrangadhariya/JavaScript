@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    <center>
+
+        <img src="" id="pic">
+        <div id="main"></div>
+
+    </center>
+</body>
+</html>
+
+<script>
+
+    fetch("https://dog.ceo/api/breeds/image/random")
+
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(json){
+        console.log(json)
+        display(json)
+    })
+
+    function display(json){
+        document.getElementById("pic").src = json.message
+        
+        let btn = document.createElement("button")
+        btn.innerHTML = "Fetch"
+        btn.addEventListener("click",function(){
+            location.reload()
+        })
+
+        document.getElementById("main").append(btn)
+        btn.style.display = "block"
+    }
+
+</script>
