@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Zone Webpag</title>
+
+    <link rel="stylesheet" href="CSS/Index.css">
+
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap Icon CDN -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434z"/></svg> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
+
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima&family=Bacasime+Antique&family=Charm&family=Josefin+Sans&family=PT+Serif&family=Playfair+Display&family=Tangerine:wght@700&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- Animated CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+</head>
+
+<body>
+
+    <header class="navbar navbar-expand-lg" id="header">
+        <div class="container-fluid" id="home">
+            <div class="navbar-brand pt-3">
+                <img src="Image/logo.png" alt="">
+            </div>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-support">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-support">
+                <ul class="navbar-nav text-center ms-auto pt-4 fw-bold">
+                    <li class="nav-item">
+                        <a href="" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">About</a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link" data-bs-toggle="dropdown">
+                            Latest
+                        </a>
+                        <div class="hot">HOT</div>
+                        <ul class="dropdown-menu" style="border-top: 3px solid #ff2020;">
+                            <li><a href="" class="dropdown-item">Product List</a></li>
+                            <li><a href="" class="dropdown-item">Product Details</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link" data-bs-toggle="dropdown">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu" style="border-top: 3px solid #ff2020;">
+                            <li><a href="" class="dropdown-item">Blog</a></li>
+                            <li><a href="" class="dropdown-item">Blog Details</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link" data-bs-toggle="dropdown">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" style="border-top: 3px solid #ff2020;">
+                            <li><a href="" class="dropdown-item">Login </a></li>
+                            <li><a href="" class="dropdown-item">Cart</a></li>
+                            <li><a href="" class="dropdown-item">Element</a></li>
+                            <li><a href="" class="dropdown-item">Confirmation</a></li>
+                            <li><a href="" class="dropdown-item">Product Checkout</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="icon-bar pt-3">
+                <i class="bi bi-search "></i>
+                <i class="bi bi-person fs-4"></i>
+                <i class="bi bi-cart "></i>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="section1">
+
+        <div class="About">
+            <h1>Select Your New <br> Perfect Style </h1><br>
+
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea<br>
+                commodo consequat is aute irure. </p>
+
+            <br>
+
+            <button class="shop">SHOP NOW</button>
+        
+        </div>
+        <div class="main-img animate__animated animate__bounceIn" data-animation="animate__bounceIn" data-delay="0s"
+            time-duration="5s">
+            <img src="Image/watch.png" alt="" class="heartbeat">
+        </div>
+
+    </div>
+
+
+    <div class="section2">
+        <div class="minisec">
+            <h2>New Arrivals</h2><br>
+            <div class="imgbar">
+                <div class="images">
+                    <img src="Image/product1.png" alt="">
+                </div>
+                <div class="images">
+                    <img src="Image/product2.png" alt="">
+                </div>
+                <div class="images">
+                    <img src="Image/product3.png" alt="">
+                </div>
+            </div><br>
+            <div class="name-pr">
+                <div class="label">
+                    <center>
+                        <h5>Thermo Ball Etip Gloves</h5>
+                        <p>$ 45,743</p>
+                    </center>
+                </div>
+                <div class="label">
+                    <center>
+                        <h5>Thermo Ball Etip Gloves</h5>
+                        <p>$ 45,743</p>
+                    </center>
+                </div>
+                <div class="label">
+                    <center>
+                        <h5>Thermo Ball Etip Gloves</h5>
+                        <p>$ 45,743</p>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="section3">
+
+        <div class="sec3img1">
+            <img src="Image/gallery1.png" alt="">
+        </div>
+        <div class="sec3img2">
+            <img src="Image/gallery2.png" alt="">
+        </div>
+        <div class="sec3img2">
+
+            <div class="img2of1">
+                <img src="Image/gallery3.png" alt="">
+            </div>
+            <div class="img2of1">
+                <img src="Image/gallery4.png" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="section4">
+
+        <div class="blank"></div>
+        <div class="title">
+            <center>
+                <h3>Popular Items</h3>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna<br>
+                     aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+            </center>
+        </div>
+        <div class="gellery">
+
+            <div class="gellery1">
+                <div class="watchbar">
+                 <div class="watch1">
+                    <i class="bi bi-heart" id="heart"></i>
+                    <img src="Image/popular1.png" alt="">
+                    <div class="cart">Add to cart</div>
+                 </div>
+                <div class="watch1">
+                    <i class="bi bi-heart" id="heart"></i>
+                    <img src="Image/popular2.png" alt="">
+                    <div class="cart">Add to cart</div>
+                </div>
+                <div class="watch1">
+                    <i class="bi bi-heart" id="heart"></i>
+                    <img src="Image/popular3.png" alt="">
+                    <div class="cart">Add to cart</div>
+                </div>
+                </div>
+
+                <div class="name-pr">
+
+                    <div class="label-2">
+                        <center>
+                            <h5>Thermo Ball Etip Gloves</h5>
+                            <p>$ 45,743</p>
+                        </center>
+                    </div>
+
+                    <div class="label-2" id="lbl">
+                        <center>
+                            <h5>Thermo Ball Etip Gloves</h5>
+                            <p>$ 45,743</p>
+                        </center>
+                    </div>
+
+                    <div class="label-2">
+                        <center>
+                            <h5>Thermo Ball Etip Gloves</h5>
+                            <p>$ 45,743</p>
+                        </center>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="gellery1">
+
+
+                <div class="watchbar">
+                    <div class="watch1">
+                        <i class="bi bi-heart" id="heart"></i>
+                        <img src="Image/popular4.png" alt="">
+                        <div class="cart">Add to cart</div>
+                    </div>
+                   <div class="watch1">
+                    <i class="bi bi-heart" id="heart"></i>
+                    <img src="Image/popular5.png" alt="">
+                    <div class="cart">Add to cart</div>
+                   </div>
+                   <div class="watch1">
+                    <i class="bi bi-heart" id="heart"></i>
+                    <img src="Image/popular6.png" alt="">
+                    <div class="cart">Add to cart</div>
+                   </div>
+                   </div>
+   
+                   <div class="name-pr">
+   
+                       <div class="label-2">
+                           <center>
+                               <h5>Thermo Ball Etip Gloves</h5>
+                               <p>$ 45,743</p>
+                           </center>
+                       </div>
+   
+                       <div class="label-2" id="lbl">
+                           <center>
+                               <h5>Thermo Ball Etip Gloves</h5>
+                               <p>$ 45,743</p>
+                           </center>
+                       </div>
+   
+                       <div class="label-2">
+                           <center>
+                               <h5>Thermo Ball Etip Gloves</h5>
+                               <p>$ 45,743</p>
+                           </center>
+                       </div>
+   
+                   </div>
+
+                
+            </div>
+
+        </div>
+
+        <button class="more">VIEW MORE PRODUCTS</button>
+
+    </div>
+
+
+    <div class="section5">
+        <!-- <img src="Image/sectin_bg1.png" alt=""> -->
+           <div class="play" type="button">
+            <a href="https://www.youtube.com/watch?v=iKTnpoFdQ-c" target="_blank">
+                <i class="bi bi-play-circle" id="player" target="_blank">
+                    
+                    <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/iKTnpoFdQ-c?si=MZFDCYT9r_L39mJi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                </i>
+            </a>
+            </div>
+        <div class="next">
+           
+                <p>NEXT VIDEO</p>
+                <i class="bi bi-arrow-right-short" id="arrow"></i>
+            
+        </div>
+    </div>
+
+
+    <div class="section6">
+
+        <div class="rolex">
+            <div class="rolexabt">
+                <h2>Watch of Choice</h2><br>
+                <p>Enim ad minim veniam, quis nostrud exercitation ullamco <br>
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute <br>
+                    irure dolor in reprehenderit in voluptate velit esse.
+
+                </p><br>
+                <button class="rolexbtn">SHOW WATCHES</button>
+            </div>
+            <div class="roleximg">
+                <img src="Image/choce_watch1.png" alt="">
+            </div>
+        </div>
+        <div class="rolex" id="rolex">
+            <div class="roleximg">
+                <img src="Image/choce_watch2.png" alt="">
+            </div>
+            <div class="rolexabt">
+              
+                <h2>Watch of Choice</h2><br>
+                <p>Enim ad minim veniam, quis nostrud exercitation ullamco <br>
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute <br>
+                    irure dolor in reprehenderit in voluptate velit esse.
+
+                </p><br>
+                <button class="rolexbtn">SHOW WATCHES</button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section7">
+        <div class="guide">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="bi bi-box-seam"></i>
+                  <h5 class="card-title">Free Shipping Method</h5>
+                  <p class="card-text">aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+        
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="material-symbols-outlined">lock_open</span>
+                  <h5 class="card-title">Secure Payment System</h5>
+                  <p class="card-text">aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+        
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="bi bi-arrow-repeat"></i>
+                <h5 class="card-title">Free Shipping Method</h5>
+                  <p class="card-text">aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+        
+                </div>
+              </div>
+
+        </div>
+
+    </div>
+
+    <div class="section8">
+
+        <div class="last">
+
+            <div class="box">
+                <img src="Image/logo.png" alt=""><br>
+
+                <p>Asorem ipsum adipolor sdit amet,<br>
+                     consectetur adipisicing elitcf sed do <br>
+                      eiusmod tem.</p>
+            </div>
+
+            <div class="box">
+
+                <h4>Quick Links</h4><br>
+
+                <a href="">About</a><br>
+                <a href="">Offers & Discounts</a><br>
+                <a href="">Get Coupon</a><br>
+                <a href="">Contact Us</a><br>
+
+            </div>
+
+            <div class="box">
+
+                <h4>New Products</h4><br>
+
+                <a href="">Woman Cloth</a><br>
+                <a href="">Fashion Accessories</a><br>
+                <a href="">Man Accessories</a><br>
+                <a href="">Rubber made Toys</a><br>
+
+            </div>
+
+            <div class="box">
+
+                <h4>Support</h4><br>
+
+                <a href="">Frequently Asked Questions</a><br>
+                <a href="">Terms & Conditions</a><br>
+                <a href="">Privacy Policy</a><br>
+                <a href="">Report a Payment Issue</a><br>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        <div class="right">
+
+            <p style="color: #4a4a4b;">©2023 All rights reserved | This template is made with <i class="fa-solid fa-heart" style="color: #ec0e0e;"></i> by Brijesh Bhuva</p>
+
+            <div class="social">
+                <i class="bi bi-twitter"></i>
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+                <i class="fa-brands fa-behance"></i>
+
+                <i class="fa-solid fa-globe"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="down">
+        <div id="top">
+            <a href="#home"><i class="bi bi-arrow-90deg-up">
+              
+            </i>
+        </a>
+            
+        </div>
+    </div>
+   
+   
+</body>
+
+</html>
