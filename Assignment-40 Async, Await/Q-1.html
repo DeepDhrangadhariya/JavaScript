@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+    <style>
+        #main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+            gap: 10px;
+        }
+        #sub{
+            /* border: 1px solid lightgray; */
+            box-shadow: 0px 0px 8px lightgray;
+            font-family: arial;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main"></div>
+    
+</body>
+</html>
+
+<script>
+
+    async function fetchData()
+    {
+        try
+        {
+            let response = await fetch('https://jsonplaceholder.typicode.com/posts')
+            let data = await response.json()
+            console.log(data)
+            displayFunction(data)
+        }
+        catch(err)
+        {
+            console.log(err)
+        }
+    }
+    fetchData()
+
+    function displayFunction(json)
+    {
+        json.map((el)=>{
+        let div = document.createElement("div")
+        div.setAttribute("id","sub")
+
+        let userId = document.createElement("h1")
+        userId.innerHTML ="User_Id: " + el.id
+
+        let title = document.createElement("h3")
+        title.innerHTML ="Title: " + el.title
+
+        let body = document.createElement("h5")
+        body.innerHTML ="Body: " + el.body
+
+        div.append(userId,title,body)
+        document.querySelector("#main").append(div)
+        })
+    }
+
+</script>
