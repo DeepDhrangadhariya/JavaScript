@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        #main{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+            gap: 20px;
+        }
+        #subdiv{
+            box-shadow: 0px 0px 12px lightgray;
+            border-radius: 20px 20px 20px 20px;
+        }
+        #filter{
+            width: 400px;
+            height: 50px;
+            text-align: center;
+        }
+        #cart{
+            width: 400px;
+            display: flex;
+            justify-content: center;
+        }
+        #cartbtn{
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            border: none;
+            box-shadow: 0px 0px 5px black;
+            border-radius: 20px 20px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <select id="filter">
+            <option value="none" selected disabled hidden>Filter</option>
+            <option value="high">High-To-Low</option>
+            <option value="low">Low-To-High</option>
+            <option value="az">A-to-Z</option>
+            <option value="za">Z-To-A</option>
+        </select>
+        <br><br>
+        <div id="cart"></div>
+        <br><br>
+    </header>
+    <center>
+        <div id="main"></div>
+    </center>
+</body>
+</html>
+<script>
+    let data = [
+        {
+            id: 1,
+            name: "iPhone X",
+            price: 899,
+            image: "https://cdn.dummyjson.com/product-images/2/1.jpg",
+        },
+        {
+            id: 2,
+            name: "MacBook Pro",
+            price: 1749,
+            image: "https://cdn.dummyjson.com/product-images/6/1.png",
+        },
+        {
+            id: 3,
+            name: "Samsung Galaxy Book",
+            price: 1499,
+            image: "https://cdn.dummyjson.com/product-images/7/1.jpg",
+        },
+        {
+            id: 4,
+            name: "HP Pavilion 15-DK1056WM",
+            price: 1099,
+            image: "https://cdn.dummyjson.com/product-images/10/1.jpg",
+        },
+        {
+            id: 5,
+            name: "WD 4TB Gaming External Hard Drive",
+            price: 114,
+            image: "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+        },
+        {
+            id: 6,
+            name: "Samsung 49-Inch 144Hz Gaming Monitor",
+            price: 999.99,
+            image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+        },
+        {
+            id: 7,
+            name: "Smartwatch",
+            price: 199.99,
+            image: "https://img.myipadbox.com/sec/product_l/SYA002251601E.jpg",
+        },
+        {
+            id: 8,
+            name: "Acer SB220Q bi 21.5-Inch Full HD Monitor",
+            price: 599,
+            image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+        }
+    ]
+
+    let cartbtn = document.createElement("button")
+    cartbtn.innerHTML = "Cart"
+    cartbtn.setAttribute("id","cartbtn")
+    document.querySelector("#cart").append(cartbtn)
+
+    cartbtn.addEventListener("click",function(){
+        window.open("cart.html")
+    })
+
+    function displayData(data)
+    {
+        document.getElementById("main").innerHTML = ""
+
+        data.map((el,i)=>{
+            
+            let div = document.createElement("div")
+            div.setAttribute("id","subdiv")
+
+            let img = document.createElement("img")
+            img.setAttribute("src",el.image)
+            img.setAttribute("id","pic")
+            img.style.width = "300px"
+            img.style.height = "300px"
+
+            let name = document.createElement("h4")
+            name.innerHTML = el.name
+
+            let price = document.createElement("h3")
+            price.innerHTML = "$ " + el.price
+
+            let btn = document.createElement("button")
+            btn.innerHTML = "Add To Cart"
+            btn.setAttribute("id","cartbtn")
+
+            btn.addEventListener("click",function(){
+                addToCart(i)
+            })
+
+            div.append(img,name,price,btn)
+
+            document.querySelector("#main").append(div)
+        }) 
+    }
+
+    function addToCart(index){
+        let product = data.filter((item,i)=>{
+            return i === index
+        })
+        let products = JSON.parse(localStorage.getItem("cart")) || []
+        products.push(product[0])
+        localStorage.setItem("cart",JSON.stringify(products))
+    }
+
+    let filter = document.getElementById("filter")
+    filter.addEventListener("change",()=>{
+        let filterValue = filter.value
+        let value = []
+
+        if(filterValue === "low")
+        {
+            value = data.slice().sort((a,b)=>a.price - b.price)
+        }
+        else if(filterValue === "high")
+        {
+            value = data.slice().sort((a,b)=>b.price - a.price)
+        }
+        else if(filterValue === "az")
+        {
+            value = data.slice().sort((a,b)=>a.name.localeCompare(b.name))
+        }
+        else if(filterValue === "za")
+        {
+            value = data.slice().sort((a,b)=>b.name.localeCompare(a.name))
+        }
+        displayData(value)
+    })
+
+    displayData(data)
+</script>
