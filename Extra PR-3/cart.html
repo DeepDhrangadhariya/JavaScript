@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        #cart{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 20px;
+        }
+        #subdiv{
+            box-shadow: 0px 0px 8px lightgray;
+            border-radius: 20px;
+        }
+        #delbtn{
+            width: 100px;
+            height: 30px;
+            border: none;
+            box-shadow: 2px 2px 8px black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <div id="cart"></div>
+    </center>
+    
+</body>
+</html>
+<script>
+    let productdata = JSON.parse(localStorage.getItem("cart")) || []
+
+    function displayData()
+    {   
+        var main = document.getElementById("cart")
+        main.innerHTML = ""
+        productdata.map((el,i)=>{
+            let div = document.createElement("div")
+            div.setAttribute("id","subdiv")
+
+            let img = document.createElement("img")
+            img.setAttribute("src",el.image)
+            img.style.width = "300px"
+            img.style.height = "300px"
+
+            let name = document.createElement("h3")
+            name.innerHTML = el.name
+
+            let price = document.createElement("h4")
+            price.innerHTML = "$ " + el.price
+
+            let delbtn = document.createElement("button")
+            delbtn.innerHTML = "Delete"
+            delbtn.setAttribute("id","delbtn")
+
+            let quantity = document.createElement("p")
+            quantity.innerHTML = "Quantity: " + el.quantity
+
+            delbtn.addEventListener("click",()=>{
+                productdata.splice(i,1)
+                localStorage.setItem("cart",JSON.stringify(productdata))
+                displayData()
+            })
+
+            div.append(img,name,price,quantity,delbtn)
+            main.append(div)
+        })
+    }
+    displayData()
+</script>
